@@ -1,0 +1,134 @@
+$dark-blue: rgb(0, 107, 166);
+$light-blue: rgb(56, 169, 224);
+$font-stack: 'Montserrat', sans-serif;
+$sub-menu: true;
+$white: #fff;
+
+::selection {
+	color: #FFFFFF;
+	background: #4DB0E1;
+    // \f078 down arrow
+}
+
+body {
+    font-family: $font-stack;
+    font-weight: 300,400,500,600,700;
+    .btn {
+        background-color: $dark-blue;
+        font-size: 14px;
+        border-radius: 35px;
+        font-weight: 600;
+        padding: 15px 30px;
+        color: $white;
+        transition: .4s;
+        &:hover {
+            background-color: $light-blue;
+            color: $white;
+        }
+    }
+    header {
+        background-image: url('https://clinika.modeltheme.com/wp-content/uploads/2021/02/slider-poster.jpg');
+        background-size: cover;
+        overflow-x: hidden;
+        padding-bottom: 180px;
+        .navbar {
+            background: transparent!important;
+            margin-top: 0;
+            .navbar-brand img {
+                width: 130px;
+            }
+            .navbar-nav {
+                margin: 0 auto;
+            }
+            .nav-item {
+                .sub-menu {
+                    list-style-type: none;
+                    background: $white;
+                    padding: 25px;
+                    border-radius: 8px;
+                    position: absolute;
+                    opacity: 0;
+                    transition: .3s;
+                    transform: translateY(50px);
+                    visibility: hidden;
+                    .sub-menu-link a { 
+                        text-decoration: none;
+                        color: #5C5E6C;
+                        margin-bottom: 10px;
+                        display: block;
+                        font-weight: 500;
+                        transition: .2s;
+                        &:hover {
+                            color: $light-blue;
+                        }
+                    }
+                    &:hover {
+                        visibility: visible;
+                            opacity: 1;
+                            transform: translateY(0px);
+                    }
+                    
+                }
+                .nav-link {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: $white;
+                    margin-right: 5px;
+                    &:hover {
+                        color: $light-blue;
+                        &+.sub-menu {
+                            visibility: visible;
+                            opacity: 1;
+                            transform: translateY(0px);
+                        }
+                    }
+                    &.dropped {
+                        position: relative;
+                        &::after {
+                            content: '\01F893';
+                            font-size: 20px;
+                            position: relative;
+                            left: 4px;
+                            top: 6px;
+                            text-align: center;
+                            vertical-align: middle;
+                            display: inline-block;
+                        
+                        }
+                    }
+                   
+                }
+               
+            }
+        }
+        .content {
+            width: 70%;
+            margin-top: 80px;
+            h1 {
+                b {
+                    font-weight: 700;
+                }
+                font-size: 60px;
+                letter-spacing: 0px;
+                font-weight: 400;
+                color: $white;
+            }
+            p {
+                font-size: 18px;
+                width: 500px;
+                color: $white;
+                margin: 40px 0;
+            }
+            .btn {
+                background: transparent;
+                border: 1px solid $white;
+                border-radius: 4px;
+                &:hover {
+                    background: rgba(255, 255, 255, 0.196);
+                    border: 1px solid transparent;
+                }
+            }
+        }
+    }
+   
+}
