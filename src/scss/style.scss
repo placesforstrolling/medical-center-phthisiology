@@ -288,7 +288,57 @@ header {
         }
     }
 }
-
+.map {
+    position: relative;
+    background-color: $dark-blue;
+    iframe {
+        // opacity: .9;
+    }
+    .map-content {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translate(0%, -50%);
+        background-color: $white;
+        padding: 20px 50px 50px 50px;
+        max-width: 700px;
+        box-shadow: rgba(38, 42, 76, 0.2) 0px 20px 70px 0px;
+        .d-flex {
+            align-items: flex-start;
+            margin-top: 30px;
+            .d-flex {
+                width: 100%;
+                margin: 0;
+                justify-content: space-between;
+                p {
+                    margin-bottom: 0;
+                    margin-right: 40px;
+                }
+            }
+        }
+        .icon {
+            padding: 15px;
+            border: 1px solid rgba(56, 168, 224, 0.363);
+            height: auto;
+            margin-right: 30px;
+            .fas {
+                color: $light-blue;
+                font-size: 20px;
+            }
+            .far {
+                color: $light-blue;
+                font-size: 20px;
+            }
+        }
+        h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+}
 footer {
 	background-color: $dark-blue;
 	padding: 80px 0 30PX 0;
