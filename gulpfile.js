@@ -20,7 +20,8 @@ gulp.task('js', function(){
     return gulp.src('src/js/**/*.js')
     .pipe(concat('script.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('dist/js'))
+    .pipe(browserSync.stream());
  });
 
 gulp.task("watch", function(done) {
@@ -36,7 +37,7 @@ gulp.task("watch", function(done) {
 
     gulp.watch("src/scss/**/*.scss", gulp.series('compile'));
     gulp.watch('src/*.html').on('change', browserSync.reload);
-    gulp.watch('src/*.js').on('change', browserSync.reload);
+    gulp.watch('src/js/**/*.js').on('change', browserSync.reload);
 });
 
 gulp.task('default', gulp.series('compile', 'js', 'watch'));

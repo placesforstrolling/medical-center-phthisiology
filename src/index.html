@@ -1,286 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../dist/css/style.css">
-</head>
-<body>
-    <header>
 
-          <!-- <div class="video-container">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css" integrity="sha512-YQlbvfX5C6Ym6fTUSZ9GZpyB3F92hmQAZTO5YjciedwAaGRI9ccNs4iw2QTCJiSPheUQZomZKHQtuwbHkA9lgw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+    integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../dist/css/style.css">
+</head>
+
+<body>
+  <header>
+
+    <!-- <div class="video-container">
             <iframe src="https://www.youtube.com/embed/b2KQ4xRomVU?playlist=b2KQ4xRomVU&loop=1;rel=0&autoplay=1&controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
             <iframe width="1920" height="927" src="https://www.youtube.com/embed/b2KQ4xRomVU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
            -->
-          
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <div class="container-fluid">
-                          <a class="navbar-brand" href="#"><img src="../dist/img/logo.png" alt="Logotype"></a>
-                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                          </button>
-                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav">
-                              <li class="nav-item">
-                                <a class="nav-link" href="#">Главная</a>
-                               
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link dropped" href="#">О центре</a>
-                                 <ul class="sub-menu">
-                                  <li class="sub-menu-link"><a href="#" class="link">История центра</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Структура центра</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Руководство центра</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Врачи центра</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Совет центра</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Филиалы центра</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Паспорт центра</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Реквезиты центра</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Научная часть центра</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Медицинский журнал центра</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Международное сотрудничество</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Международные конференции и выставки<a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Вакансии</a></li>
-                                </ul>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link dropped" href="#">Отделы и подразделения</a>
-                                 <ul class="sub-menu">
-                                  <li class="sub-menu-link"><a href="#" class="link">Научный отдел</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Клинические подразделения</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Диагностические подразделения</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Медицинский туризм</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Общество</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Отдел ГРП ГФ</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Отдел закупа</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Аптека</a></li>
-                                </ul>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link dropped" href="#">Специалистам</a>
-                                 <ul class="sub-menu">
-                                  <li class="sub-menu-link"><a href="#" class="link">Усовершенствование врачей и медсестёр</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Постдипломное образование</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Клиническая ординатура</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Кафедра фтизиатрии ТМА</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Кафедра фтизиатрии ТашИУВ</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Кафедра фтизиатрии ТашПМИ</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Библиотека</a></li>
-                                </ul>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link dropped" href="#">Пациентам</a>
-                                 <ul class="sub-menu">
-                                  <li class="sub-menu-link"><a href="#" class="link">Школа ХОБЛ</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Школа астматиков</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Памятка для больных туберкулёзом</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">FAQ (Вопрос-Ответ)</a></li>
-                                </ul>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link dropped" href="#">Интерактивные услуги</a>
-                                 <ul class="sub-menu">
-                                  <li class="sub-menu-link"><a href="#" class="link">График работы врачей</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">График приёма администрацией</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Калькулятор услуг</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Прейскурант</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Онлайн запись на приём</a></li>
-                                </ul>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link dropped" href="#">Пресс-центр</a>
-                                 <ul class="sub-menu">
-                                  <li class="sub-menu-link"><a href="#" class="link">Новости центра</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Новости о туберкулёзе в мире</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Фотогалерея</a></li>
-                                  <li class="sub-menu-link"><a href="#" class="link">Видео центра</a></li>
-                                </ul>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="#">Контакты</a>
-                              </li>
-                            </ul>
-                            <a href="https://technomed.uz/OnlineRecord/AllDoctor?UniqueID=FF9E547268804594BDB98542CEF5AF25" class="btn me-2">Записаться</a>
-                            <!-- <form class="d-flex">
+
+    <div class="container-fluid">
+      <div class="row under-menu">
+        <div class="col-lg-12">
+          <nav class="navbar under-menu-in">
+            <ul class="left">
+              <li class="link">
+                <a href="#">English</a>
+              </li>|
+              <li class="link">
+                <a href="#">Русский</a>
+              </li>|
+              <li class="link">
+                <a href="#">O'zbekcha</a>
+              </li>
+            </ul>
+            <ul class="right">
+              <li class="link">
+                <a href="#"><i class="far fa-eye"></i></a>
+              </li>|
+              <li class="link">
+                <a href="#"><i class="fas fa-sitemap"></i></a>
+              </li>|
+              <li class="link">
+                <a href="#" targer="_blank"><i class="fas fa-rss"></i></a>
+              </li>|
+              <li class="link">
+                <a id="mobileView" href="#"><i class="fas fa-mobile-alt"></i></a>
+              </li>|
+              <li class="link">
+                <a href="#" onClick="window.print()"><i class="fas fa-print"></i></a>
+              </li>|
+              <li class="link">
+                <a href="#"><img src="../dist/img/gerb.png" alt="Gerb"></a>
+              </li>
+              <li class="link">
+                <a href="#"><img src="../dist/img/flag.png" alt="Flag"></a>
+              </li>
+              <li class="link">
+                <a href="#"><i class="fas fa-music"></i></a>
+              </li>|
+            </ul>
+          </nav>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="../dist/img/logo.png" alt="Logotype"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Главная</a>
+
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link dropped" href="#">О центре</a>
+                    <ul class="sub-menu">
+                      <li class="sub-menu-link"><a href="#" class="link">История центра</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Структура центра</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Руководство центра</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Врачи центра</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Совет центра</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Филиалы центра</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Паспорт центра</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Реквезиты центра</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Научная часть центра</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Медицинский журнал центра</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Международное сотрудничество</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Международные конференции и выставки<a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Вакансии</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link dropped" href="#">Отделы и подразделения</a>
+                    <ul class="sub-menu">
+                      <li class="sub-menu-link"><a href="#" class="link">Научный отдел</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Клинические подразделения</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Диагностические подразделения</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Медицинский туризм</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Общество</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Отдел ГРП ГФ</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Отдел закупа</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Аптека</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link dropped" href="#">Специалистам</a>
+                    <ul class="sub-menu">
+                      <li class="sub-menu-link"><a href="#" class="link">Усовершенствование врачей и медсестёр</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Постдипломное образование</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Клиническая ординатура</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Кафедра фтизиатрии ТМА</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Кафедра фтизиатрии ТашИУВ</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Кафедра фтизиатрии ТашПМИ</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Библиотека</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link dropped" href="#">Пациентам</a>
+                    <ul class="sub-menu">
+                      <li class="sub-menu-link"><a href="#" class="link">Школа ХОБЛ</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Школа астматиков</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Памятка для больных туберкулёзом</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">FAQ (Вопрос-Ответ)</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link dropped" href="#">Интерактивные услуги</a>
+                    <ul class="sub-menu">
+                      <li class="sub-menu-link"><a href="#" class="link">График работы врачей</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">График приёма администрацией</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Калькулятор услуг</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Прейскурант</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Онлайн запись на приём</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link dropped" href="#">Пресс-центр</a>
+                    <ul class="sub-menu">
+                      <li class="sub-menu-link"><a href="#" class="link">Новости центра</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Новости о туберкулёзе в мире</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Фотогалерея</a></li>
+                      <li class="sub-menu-link"><a href="#" class="link">Видео центра</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Контакты</a>
+                  </li>
+                </ul>
+                <a href="https://technomed.uz/OnlineRecord/AllDoctor?UniqueID=FF9E547268804594BDB98542CEF5AF25"
+                  class="btn me-2">Записаться</a>
+                <!-- <form class="d-flex">
                               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                               <button class="btn btn-outline-success" type="submit">Search</button>
                             </form> -->
-                          </div>
-                        </div>
-                      </nav>
-                </div>
+              </div>
             </div>
+          </nav>
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-                <div class="content">
-                    <h1><b>Медицинский Центр</b><br> Которому можно Доверять</h1>
-                    <p>Медицинский центр Medicare - это команда врачей, готовых ответить на все ваши медицинские вопросы. Наша специализированная команда не оставит желать лучшего.</p>
-                    <a href="#" class="btn">О Нас</a>
-                </div>
-            </div>
-          </div>
-          <div class="row xtra-header">
-            <div class="col-lg-12">
-              <div class="xtra-header-items">
-                <div class="item">
-                  <h3>График работы</h3>
-                  <div class="d-flex">
-                    <p>Пн-Пт:</p>
-                    <p>8:00-23:00</p>
-                  </div>
-                  <div class="d-flex">
-                    <p>Сб-Вс:</p>
-                    <p>8:00-22:00</p>
-                  </div>
-                  <a class="phone" href="tel:+998712780470"><i class="fas fa-phone"></i> +998 (71) 278-04-70</a>
-                </div>
-                <div class="item"> <h3>График работы</h3>
-                  <div class="d-flex">
-                    <p>Пн-Пт:</p>
-                    <p>8:00-23:00</p>
-                  </div>
-                  <div class="d-flex">
-                    <p>Сб-Вс:</p>
-                    <p>8:00-22:00</p>
-                  </div>
-                  <a class="phone" href="tel:+998712780470"><i class="fas fa-phone"></i> +998 (71) 278-04-70</a></div>
-                <div class="item"> <h3>График работы</h3>
-                  <div class="d-flex">
-                    <p>Пн-Пт:</p>
-                    <p>8:00-23:00</p>
-                  </div>
-                  <div class="d-flex">
-                    <p>Сб-Вс:</p>
-                    <p>8:00-22:00</p>
-                  </div>
-                  <a class="phone" href="tel:+998712780470"><i class="fas fa-phone"></i> +998 (71) 278-04-70</a></div>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-    </header>
-
-    <section class="news">
-      <div class="container">
-        <div class="row text-center heading">
-          <div class="col-lg-12">
-            <h2>Последние новости клиники</h2>
-            <p>Команда опытных врачей возглавляет нашу клинику! Познакомьтесь с нашими сотрудниками и посетите нас для решения следующей проблемы!</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="item">
-              <div class="image">
-                <img src="../dist/img/new1.jpg" alt="New">
-              </div>
-              <div class="item-body">
-                <p class="date">3 Ноября 2021</p>
-                <h3>Диагностика болезней и инфекций</h3>
-                <p>Прогнозируемый опыт на основе мультимедиа и стратегии кросс-медиа роста. Легко визуализируйте качественный интеллектуальный капитал без превосходного сотрудничества и ...</p>
-                <a href="#" class="more">Читать полностью <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="item">
-              <div class="image">
-                <img src="../dist/img/new2.jpg" alt="New">
-              </div>
-              <div class="item-body">
-                <p class="date">3 Ноября 2021</p>
-                <h3>Диагностика болезней и инфекций</h3>
-                <p>Прогнозируемый опыт на основе мультимедиа и стратегии кросс-медиа роста. Легко визуализируйте качественный интеллектуальный капитал без превосходного сотрудничества и ...</p>
-                <a href="#" class="more">Читать полностью <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="item">
-              <div class="image">
-                <img src="../dist/img/new3.jpg" alt="New">
-              </div>
-              <div class="item-body">
-                <p class="date">3 Ноября 2021</p>
-                <h3>Диагностика болезней и инфекций</h3>
-                <p>Прогнозируемый опыт на основе мультимедиа и стратегии кросс-медиа роста. Легко визуализируйте качественный интеллектуальный капитал без превосходного сотрудничества и ...</p>
-                <a href="#" class="more">Читать полностью <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="content">
+            <h1><b>Медицинский Центр</b><br> Которому можно Доверять</h1>
+            <p>Медицинский центр Medicare - это команда врачей, готовых ответить на все ваши медицинские вопросы. Наша
+              специализированная команда не оставит желать лучшего.</p>
+            <a href="#" class="btn">О Нас</a>
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="current">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-3">
+      <div class="row xtra-header">
+        <div class="col-lg-12">
+          <div class="xtra-header-items">
             <div class="item">
-              <i class="fas fa-procedures"></i>
-              <h3>134</h3>
-              <p>Общее количество <br> коек</p>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="item">
-              <i class="fas fa-bed"></i>
-              <h3>51</h3>
-              <p>Количество свободных <br> коек</p>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="item">
-              <i class="fas fa-hospital"></i>
-              <h3>32</h3>
-              <p>Свободные места для дневного стационара</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="map">
-      <div id="map">
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Affe38e80506e506b17abdecd967edbeebdc06225bfed77b25499f7ab0447883f&amp;source=constructor" width="100%" height="600" frameborder="0"></iframe>
-        <div class="map-content">
-          <div class="d-flex">
-            <span class="icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </span>
-            <div class="txt">
-              <h4>Шайхонтохурский ул. АЛИМОВА, 1</h4>
-              <p>Знайте наши офисы и филиалы. Свяжитесь с нами сегодня.</p>
-            </div>
-          </div>
-          <div class="d-flex">
-            <span class="icon">
-              <i class="fas fa-phone"></i>
-            </span>
-            <div class="txt">
-              <h4>+998 (71) 278-04-70 / +998 (71) 278-15-28</h4>
-              <p>Посетите нашу страницу записи на прием, чтобы найти удобное для вас время</p>
-            </div>
-          </div>
-          <div class="d-flex">
-            <span class="icon">
-              <i class="far fa-clock"></i>
-            </span>
-            <div class="txt">
-              <h4>Часы работы</h4>
+              <h3>График работы</h3>
               <div class="d-flex">
                 <p>Пн-Пт:</p>
                 <p>8:00-23:00</p>
@@ -289,89 +199,299 @@
                 <p>Сб-Вс:</p>
                 <p>8:00-22:00</p>
               </div>
+              <a class="phone" href="tel:+998712780470"><i class="fas fa-phone"></i> +998 (71) 278-04-70</a>
+            </div>
+            <div class="item">
+              <h3>График работы</h3>
+              <div class="d-flex">
+                <p>Пн-Пт:</p>
+                <p>8:00-23:00</p>
+              </div>
+              <div class="d-flex">
+                <p>Сб-Вс:</p>
+                <p>8:00-22:00</p>
+              </div>
+              <a class="phone" href="tel:+998712780470"><i class="fas fa-phone"></i> +998 (71) 278-04-70</a>
+            </div>
+            <div class="item">
+              <h3>График работы</h3>
+              <div class="d-flex">
+                <p>Пн-Пт:</p>
+                <p>8:00-23:00</p>
+              </div>
+              <div class="d-flex">
+                <p>Сб-Вс:</p>
+                <p>8:00-22:00</p>
+              </div>
+              <a class="phone" href="tel:+998712780470"><i class="fas fa-phone"></i> +998 (71) 278-04-70</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="news">
+    <div class="container">
+      <div class="row text-center heading">
+        <div class="col-lg-12">
+          <h2>Последние новости клиники</h2>
+          <p>Команда опытных врачей возглавляет нашу клинику! Познакомьтесь с нашими сотрудниками и посетите нас для
+            решения следующей проблемы!</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="item">
+            <div class="image">
+              <img src="../dist/img/new1.jpg" alt="New">
+            </div>
+            <div class="item-body">
+              <p class="date">3 Ноября 2021</p>
+              <h3>Диагностика болезней и инфекций</h3>
+              <p>Прогнозируемый опыт на основе мультимедиа и стратегии кросс-медиа роста. Легко визуализируйте
+                качественный интеллектуальный капитал без превосходного сотрудничества и ...</p>
+              <a href="#" class="more">Читать полностью <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="item">
+            <div class="image">
+              <img src="../dist/img/new2.jpg" alt="New">
+            </div>
+            <div class="item-body">
+              <p class="date">3 Ноября 2021</p>
+              <h3>Диагностика болезней и инфекций</h3>
+              <p>Прогнозируемый опыт на основе мультимедиа и стратегии кросс-медиа роста. Легко визуализируйте
+                качественный интеллектуальный капитал без превосходного сотрудничества и ...</p>
+              <a href="#" class="more">Читать полностью <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="item">
+            <div class="image">
+              <img src="../dist/img/new3.jpg" alt="New">
+            </div>
+            <div class="item-body">
+              <p class="date">3 Ноября 2021</p>
+              <h3>Диагностика болезней и инфекций</h3>
+              <p>Прогнозируемый опыт на основе мультимедиа и стратегии кросс-медиа роста. Легко визуализируйте
+                качественный интеллектуальный капитал без превосходного сотрудничества и ...</p>
+              <a href="#" class="more">Читать полностью <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 col-md-5 col-sm-6 footer-block left">
-            <img src="../dist/img/logo.png" alt="Logo">
-            <p>+998 (71) 278-04-70</p>
-            
-            <p>+998 (71) 278-15-28</p>
-            <p class="mail"><b>info@medical.uz</b></p>
-            <a href="#"><i class="fab fa-linkedin"></i></i>
-            </a>
-            <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i>
-            </a>
+  <section class="current">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-3">
+          <div class="item">
+            <i class="fas fa-procedures"></i>
+            <h3>134</h3>
+            <p>Общее количество <br> коек</p>
           </div>
-          <div class="col-lg-2 col-md-2 col-sm-6 footer-block">
-            <a href="#" class="link">История центра</a>
-            <a href="#" class="link">Структура центра</a>
-            <a href="#" class="link">Руководство центра</a>
-            <a href="#" class="link">Врачи центра</a>
-            <a href="#" class="link">Совет центра</a>
-            <a href="#" class="link">Филиалы центра</a>
-            <a href="#" class="link">Паспорт центра</a>
-            <a href="#" class="link">Реквезиты центра</a>
-            <a href="#" class="link">Научная часть центра</a>
-            <a href="#" class="link">Медицинский журнал центра</a>
-            <a href="#" class="link">Международное сотрудничество</a>
-            <a href="#" class="link">Международные конференции и выставки<a>
-            <a href="#" class="link">Вакансии</a>
+        </div>
+        <div class="col-lg-3">
+          <div class="item">
+            <i class="fas fa-bed"></i>
+            <h3>51</h3>
+            <p>Количество свободных <br> коек</p>
           </div>
-          <div class="col-lg-2 col-md-2 col-sm-6 footer-block">
-            <a href="#" class="link">Усовершенствование врачей и медсестёр</a>
-            <a href="#" class="link">Постдипломное образование</a>
-            <a href="#" class="link">Клиническая ординатура</a>
-            <a href="#" class="link">Кафедра фтизиатрии ТМА</a>
-            <a href="#" class="link">Кафедра фтизиатрии ТашИУВ</a>
-            <a href="#" class="link">Кафедра фтизиатрии ТашПМИ</a>
-            <a href="#" class="link">Библиотека</a></li>
-          </div>
-          <div class="col-lg-2 col-md-2 col-sm-6 footer-block">
-            <a href="#" class="link">График работы врачей</a>
-            <a href="#" class="link">График приёма администрацией</a>
-            <a href="#" class="link">Калькулятор услуг</a>
-            <a href="#" class="link">Прейскурант</a>
-            <a href="#" class="link">Онлайн запись на приём</a>
-            
-          </div>
-          <div class="col-lg-12">
-            <nav class="navbar navbar-expand-lg">
-              <p class="nav-item">© 2021 <b>Mustafa</b> Technologies Inc.</p>
-              
-              
-              <ul class="navbar-nav m-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Приватность</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Доступность</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Условия</a>
-                </li>
-                
-              </ul>
-              
-            </nav>
+        </div>
+        <div class="col-lg-3">
+          <div class="item">
+            <i class="fas fa-hospital"></i>
+            <h3>32</h3>
+            <p>Свободные места для дневного стационара</p>
           </div>
         </div>
       </div>
-      </footer>
+    </div>
+  </section>
+
+  <section class="map">
+    <div id="map">
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3Affe38e80506e506b17abdecd967edbeebdc06225bfed77b25499f7ab0447883f&amp;source=constructor"
+        width="100%" height="600" frameborder="0"></iframe>
+      <div class="map-content">
+        <div class="d-flex">
+          <span class="icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </span>
+          <div class="txt">
+            <h4>Шайхонтохурский ул. АЛИМОВА, 1</h4>
+            <p>Знайте наши офисы и филиалы. Свяжитесь с нами сегодня.</p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <span class="icon">
+            <i class="fas fa-phone"></i>
+          </span>
+          <div class="txt">
+            <h4>+998 (71) 278-04-70 / +998 (71) 278-15-28</h4>
+            <p>Посетите нашу страницу записи на прием, чтобы найти удобное для вас время</p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <span class="icon">
+            <i class="far fa-clock"></i>
+          </span>
+          <div class="txt">
+            <h4>Часы работы</h4>
+            <div class="d-flex">
+              <p>Пн-Пт:</p>
+              <p>8:00-23:00</p>
+            </div>
+            <div class="d-flex">
+              <p>Сб-Вс:</p>
+              <p>8:00-22:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
+<section class="gov">
+  <div class="container">
+    <div class="row gov-links">
+      <div class="col-lg-12">
+         <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+          
+            <li class="glide__slide">
+              <img src="../dist/img/gerb.png" alt="Open data logotype">
+              <a href="https://ssv.uz/">Министерство здравоохранения Республики Узбекистан</a>
+            </li>
+            <li class="glide__slide">
+              <img src="../dist/img/gerb.png" alt="Open data logotype">
+              <a href="https://www.gov.uz/">Правительственный портал Республики Узбекистан</a>
+            </li>
+            <li class="glide__slide">
+              <img src="../dist/img/gov-services-logo.png" alt="Open data logotype">
+              <a href="https://my.gov.uz/">Единый портал интерактивных государственных услуг</a>
+            </li>
+            <li class="glide__slide">
+              <img src="../dist/img/gov-data-logo.png" alt="Open data logotype">
+              <a href="https://data.gov.uz/">Портал открытых данных Республики Узбекистан</a>
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left btn" data-glide-dir="<"><i class="fas fa-chevron-left"></i></button>
+          <button class="glide__bullet" data-glide-dir="=0"></button>
+          <button class="glide__bullet" data-glide-dir="=1"></button>
+          <button class="glide__bullet" data-glide-dir="=2"></button>
+          <button class="glide__bullet" data-glide-dir="=3"></button>
+          <button class="glide__arrow glide__arrow--right btn" data-glide-dir=">"><i class="fas fa-chevron-right"></i></button>
+          </span>
+          
+      </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="../dist/js/script.js"></script>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-5 col-sm-6 footer-block left">
+          <img src="../dist/img/logo.png" alt="Logo">
+          <p>+998 (71) 278-04-70</p>
+
+          <p>+998 (71) 278-15-28</p>
+          <p class="mail"><b>info@medical.uz</b></p>
+          <a href="#"><i class="fab fa-linkedin"></i></i>
+          </a>
+          <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-6 footer-block">
+          <a href="#" class="link">История центра</a>
+          <a href="#" class="link">Структура центра</a>
+          <a href="#" class="link">Руководство центра</a>
+          <a href="#" class="link">Врачи центра</a>
+          <a href="#" class="link">Совет центра</a>
+          <a href="#" class="link">Филиалы центра</a>
+          <a href="#" class="link">Паспорт центра</a>
+          <a href="#" class="link">Реквезиты центра</a>
+          <a href="#" class="link">Научная часть центра</a>
+          <a href="#" class="link">Медицинский журнал центра</a>
+          <a href="#" class="link">Международное сотрудничество</a>
+          <a href="#" class="link">Международные конференции и выставки<a>
+              <a href="#" class="link">Вакансии</a>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-6 footer-block">
+          <a href="#" class="link">Усовершенствование врачей и медсестёр</a>
+          <a href="#" class="link">Постдипломное образование</a>
+          <a href="#" class="link">Клиническая ординатура</a>
+          <a href="#" class="link">Кафедра фтизиатрии ТМА</a>
+          <a href="#" class="link">Кафедра фтизиатрии ТашИУВ</a>
+          <a href="#" class="link">Кафедра фтизиатрии ТашПМИ</a>
+          <a href="#" class="link">Библиотека</a></li>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-6 footer-block">
+          <a href="#" class="link">График работы врачей</a>
+          <a href="#" class="link">График приёма администрацией</a>
+          <a href="#" class="link">Калькулятор услуг</a>
+          <a href="#" class="link">Прейскурант</a>
+          <a href="#" class="link">Онлайн запись на приём</a>
+
+        </div>
+        <div class="col-lg-12">
+          <nav class="navbar navbar-expand-lg">
+            <p class="nav-item">© 2021 <b>Mustafa</b> Technologies Inc.</p>
+
+
+            <ul class="navbar-nav m-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Приватность</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Доступность</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Условия</a>
+              </li>
+
+            </ul>
+
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" integrity="sha512-IkLiryZhI6G4pnA3bBZzYCT9Ewk87U4DGEOz+TnRD3MrKqaUitt+ssHgn2X/sxoM7FxCP/ROUp6wcxjH/GcI5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"
+    integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../dist/js/script.js"></script>
+  <script>
+ 
+  // new Glide('.glide').mount();
+  new Glide('.glide', {
+  type: 'carousel',
+  startAt: 0,
+  perView: 3
+}).mount();
+  </script>
 </body>
+
 </html>
