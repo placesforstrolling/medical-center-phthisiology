@@ -2,9 +2,22 @@ var gulp = require("gulp");
 const scss = require('gulp-sass')(require('sass'));
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var minify = require('gulp-minify-css')
+var minify = require('gulp-minify-css');
+// var webserver = require('gulp-webserver');
 var browserSync = require("browser-sync");
 const autoprefixer = require('gulp-autoprefixer');
+
+// gulp.task('webserver', () => {
+//     return gulp.src('dist')
+//         .pipe(webserver({
+//             hostname: '0.0.0.0',
+//             port: 8000,
+//             livereload: true,
+//             directoryListing: false,
+//             open: true,
+//             fallback: './dist/index.html'
+//         }));
+// });
 
 gulp.task('compile', function(){
     return gulp.src("src/scss/**/*.scss")
@@ -15,6 +28,7 @@ gulp.task('compile', function(){
         .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.stream());
 });
+
 
 gulp.task('js', function(){
     return gulp.src('src/js/**/*.js')
@@ -27,7 +41,7 @@ gulp.task('js', function(){
 gulp.task("watch", function(done) {
     browserSync.init({
         server: "./",
-        startPath: "/src/index.html", // After it browser running
+        startPath: "/dist/index.html", // After it browser running
         browser: 'firefox',
         host: 'localhost',
         port: 4000,
