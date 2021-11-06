@@ -781,9 +781,18 @@ footer {
         }
         .navbar.bg-light {
             .nav-item {
-                .sub-menu .sub-menu-link a {
-                    font-size: 13px;
+                .sub-menu .sub-menu-link {
+                    a {
+                    font-size: 14px;
+                    }
+                    &:first-child a {
+                        margin-top: 15px;
+                    }
+                    &:last-child a {
+                        margin-bottom: 15px;
+                    }
                 }
+
                 .sub-menu .sub-sub::before {
                     font-size: 20px;
                 }
@@ -822,6 +831,34 @@ footer {
             padding: 10px;
             .fas {
                 font-size: 18px;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 1486px) {
+    .navbar.bg-light {
+        .btn {
+            max-width: 162px;
+        }
+    }
+}
+@media (max-width: 1376px) {
+    .navbar.bg-light {
+        .btn {
+            max-width: 100%;
+            position: absolute;
+            right: 15px;
+            top: 80px;
+        }
+    }
+}
+@media (max-width: 1206px) {
+    header {
+        .navbar.bg-light {
+            .navbar-brand {
+                width: 85px;
             }
         }
     }
