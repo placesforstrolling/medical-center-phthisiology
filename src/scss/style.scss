@@ -511,9 +511,9 @@ header {
     position: relative;
     background-color: $dark-blue;
 
-    iframe {
-        // opacity: .9;
-    }
+    // iframe {
+    //     opacity: .9;
+    // }
 
     .map-content {
         position: absolute;
@@ -850,8 +850,11 @@ footer {
             max-width: 100%;
             position: absolute;
             right: 15px;
-            top: 80px;
+            top: 74px;
         }
+    }
+    header .content {
+        margin-left: 40px;
     }
 }
 @media (max-width: 1206px) {
@@ -864,3 +867,174 @@ footer {
     }
     
 }
+@media (max-width: 1199px) {
+    header {
+        .container {
+            padding-top: 90px;
+            padding-bottom: 60px;
+        }
+        .navbar.bg-light {
+            .navbar-brand {
+                width: 100px;
+            }
+        }
+        .xtra-header {
+            .xtra-header-items {
+                .item {
+                    padding: 25px;
+                    h3 {
+                        font-size: 22px;
+                    }
+                    .phone {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    .news {
+        .item {
+            .item-body {
+                h3 {
+                    font-size: 22px;
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+            .image {
+                height: 215px;
+            }
+        }
+    }
+    .current .item p {
+        font-size: 18px;
+    }
+}
+@media (max-width: 991px) {
+    body {
+        .btn {
+            font-size: 12px;
+        padding: 10px 20px;
+        }
+        
+    }
+    header {
+        .content {
+           margin-left: 0; 
+           h1 {
+            font-size: 35px;
+        }
+        }
+
+        .xtra-header {
+            .xtra-header-items {
+                .item {
+                    p {
+                    margin-right: 10px;
+                    }
+                    
+                    padding: 20px;
+                    h3 {
+                        font-size: 19px;
+                        margin-bottom: 20px;
+                    }
+                    .phone {
+                        font-size: 14px;
+                    }
+                    .d-flex {
+                        p {
+                            margin-right: 10px;
+                        }
+                    }
+                    .but {
+                        text-align: left;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .news {
+        .heading {
+            p {
+                max-width: 80%;
+                margin: 0 auto 40px;
+            }
+        }
+        .item {
+            .item-body {
+                h3 {
+                    font-size: 18px;
+                }
+                p {
+                    font-size: 12px;
+                }
+                .more {
+                    font-size: 14px;
+                }
+            }
+            .image {
+                height: 150px;
+            }
+        }
+    }
+    .current .item p {
+        font-size: 16px;
+    }
+    .gov .glide {
+    .glide__slide {
+            padding: 20px;
+            flex-direction: column;
+            text-align: center;
+            align-self: center;
+            img {
+                width: 70px;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            a {
+                font-size: 12px;
+            }
+        } 
+        .glide__arrows {
+            .btn {
+                font-size: 25px;
+            }
+        }
+    }
+    .map .map-content {
+        padding: 10px 20px 20px 20px;
+        max-width: 400px;
+        h4 {
+            margin-bottom: 10px;
+        }
+        .sec {
+            display: block;
+        }
+        .d-flex {
+            align-items: flex-start;
+            margin-top: 10px;
+        }
+        .slash {
+            display: none;
+        }
+    }
+    footer {
+        .navbar {
+            .navbar-nav {
+                flex-direction: row;
+                .nav-link {
+                    margin-right: 10px;
+                    font-size: 15px;
+                }
+                p {
+                    font-size: 15px;
+                }
+            }
+            
+        }
+    }
+}
+    
+
