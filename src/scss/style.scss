@@ -72,6 +72,20 @@ header {
             visibility: hidden;
         }
     }
+    .breadcrumbs {
+        display: flex;
+        color: $white;
+        font-size: 16px;
+        margin-top: 20px;
+        a {
+            color: $white;
+            text-decoration: none;
+            margin: 0 5px;
+            &:hover {
+                color: $light-blue;
+            }
+        }
+    }
     .header-slide {
         position: absolute;
         width: 100%;
@@ -88,7 +102,7 @@ header {
                 z-index: -1;
                 width: 100%;
                 object-fit: cover;
-                object-position: center top;
+                object-position: center -50px;
                 opacity: 0.6;
             }
         
@@ -685,6 +699,13 @@ footer {
         }
     }
 }
+
+
+// center-history
+
+
+
+
 
 @media (max-width: 1747px) {
     header {
