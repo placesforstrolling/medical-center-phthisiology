@@ -926,7 +926,10 @@ footer {
             font-size: 35px;
         }
         }
-
+        .header-slide .header-background {
+            object-position: 0;
+            height: 100%;
+        }
         .xtra-header {
             .xtra-header-items {
                 .item {
@@ -1037,4 +1040,6 @@ footer {
     }
 }
     
-
+@media (max-width: 852px) {
+    
+}
