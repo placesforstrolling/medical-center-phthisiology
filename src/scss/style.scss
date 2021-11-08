@@ -641,20 +641,22 @@ footer {
     padding: 80px 0 30PX 0;
 
     .left {
+        display: flex;
+        align-items: flex-end;
+        div {
+            margin-right: 50px;
+        }
         img {
-            width: 100px;
+            width: 130px;
             margin-bottom: 10px;
         }
 
         p {
             color: #fff;
-            margin-bottom: 15px;
+            margin-bottom: 0;
+            font-size: 20px;
         }
 
-        .mail {
-            margin-top: 40px;
-            margin-bottom: 50px;
-        }
 
         a {
             color: $white;
@@ -666,6 +668,7 @@ footer {
                 color: $light-blue;
             }
         }
+        
     }
 
     .link {
