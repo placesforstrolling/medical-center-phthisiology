@@ -5,21 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Medical</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css" integrity="sha512-YQlbvfX5C6Ym6fTUSZ9GZpyB3F92hmQAZTO5YjciedwAaGRI9ccNs4iw2QTCJiSPheUQZomZKHQtuwbHkA9lgw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
-    integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./css/style.css?ver1.1">
+  <title><?php bloginfo('name'); echo ' | '; bloginfo('description')?></title>
+  <?php 
+    wp_head(); 
+  ?>
 </head>
 
 <body>
   <header>
-    
     <div class="container-fluid">
       <div class="row under-menu">
         <div class="col-lg-12">
@@ -52,10 +45,10 @@
                 <a href="#" onClick="window.print()"><i class="fas fa-print"></i></a>
               </li>|
               <li class="link">
-                <a href="#"><img src="./img/gerb.png" alt="Gerb"></a>
+                <a href="#"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/gerb.png" alt="Gerb"></a>
               </li>
               <li class="link">
-                <a href="#"><img src="./img/flag.png" alt="Flag"></a>
+                <a href="#"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/flag.png" alt="Flag"></a>
               </li>
               <li class="link">
                 <a href="#"><i class="fas fa-music"></i></a>
@@ -65,11 +58,12 @@
 
         </div>
       </div>
-      
       <div class="row">
         <nav class="navbar navbar-expand-xl navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="./index.html"><img src="./img/logo.png" alt="Logotype"></a>
+              <div class="navbar-brand" href="#">
+               <?php the_custom_logo(); ?>
+                </div>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -78,13 +72,13 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" href="./index.html">Главная</a>
+                    <a class="nav-link" href="#">Главная</a>
 
                   </li>
                   <li class="nav-item">
                     <a class="nav-link dropped" href="#">О центре</a>
                     <ul class="sub-menu">
-                      <li class="sub-menu-link"><a href="#" class="link">История центра</a></li>
+                      <li class="sub-menu-link"><a href="./center-history.html" class="link">История центра</a></li>
                       <li class="sub-menu-link"><a href="#" class="link">Структура центра</a></li>
                       <li class="sub-menu-link"><a href="#" class="link">Руководство центра</a></li>
                       <li class="sub-menu-link"><a href="#" class="link">Врачи центра</a></li>
@@ -198,110 +192,3 @@
           </nav>
       </div>
     </div>
-    <div class="header-slide">
-        <div class="carousel-item active">
-            <img src="./img/header-bg1.jpg" class="header-background" alt=""> 
-        </div>
-    </div>
-    
-    <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="content">
-              <h1>История центра</h1>
-              <div class="breadcrumbs">
-                  <a href="./index.html">Главная</a> / <a href="#">О центре</a> / <a href="#">История центра</a>
-              </div> 
-            </div>
-          </div>
-        </div>
-      </div>
-  </header>
-
-  <section class="history">
-      <div class="container first">
-          <div class="row justify-content-between">
-              <div class="col-lg-6">
-                  <img src="./img/center-building.jpg" alt="TB center">
-              </div>
-              <div class="col-lg-5">
-                    <h3>Наша история</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dicta harum minus debitis aut vitae, pariatur reiciendis sit saepe eius. Harum nam pariatur atque aspernatur, rerum quae voluptatum labore accusamus magni, minima maiores eum fugiat cupiditate tempora aliquid odit autem provident obcaecati, exercitationem nihil saepe ipsam enim molestiae facilis. Consectetur.</p>
-                    <a href="#" class="btn">Записаться на консультацию</a>
-              </div>
-          </div>
-      </div>
-      <div class="container second">
-          <div class="row justify-content-between">
-             
-              <div class="col-lg-5">
-                    <h3>Посмотрите видеоролик о нашем центре</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dicta harum minus debitis aut vitae, pariatur reiciendis sit saepe eius. Harum nam pariatur atque aspernatur, rerum quae voluptatum labore accusamus magni, minima maiores eum fugiat cupiditate tempora aliquid odit autem provident obcaecati, exercitationem nihil saepe ipsam enim molestiae facilis. Consectetur.</p>
-              </div>
-              <div class="col-lg-6">
-                <iframe src="https://www.youtube.com/embed/hJH5AflSPD4?loop=1&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-          </div>
-      </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 footer-block left">
-          <div>
-            <img src="./img/logo.png" alt="Logo">
-            <p>+998 (71) 278-04-70</p>
-            <p>+998 (71) 278-15-28</p>
-          </div>
-          <div>
-            <p class="mail"><b>info@medical.uz</b></p>
-          </div>
-          <div>
-            <a href="#"><i class="fab fa-linkedin"></i></i>
-          </a>
-          <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i>
-          </a>
-          <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i>
-          </a>
-          <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i>
-          </a>
-          </div>
-          
-        </div>
-
-        <div class="col-lg-12">
-          <nav class="navbar navbar-expand-lg">
-            <p class="nav-item">© 2021 <b>Mustafa</b> Technologies Inc.</p>
-
-
-            <ul class="navbar-nav m-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Приватность</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Доступность</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Условия</a>
-              </li>
-
-            </ul>
-
-          </nav>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js" integrity="sha512-IkLiryZhI6G4pnA3bBZzYCT9Ewk87U4DGEOz+TnRD3MrKqaUitt+ssHgn2X/sxoM7FxCP/ROUp6wcxjH/GcI5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"
-    integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="./js/script.js"></script>
-</body>
-
-</html>

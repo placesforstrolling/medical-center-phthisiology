@@ -25,7 +25,7 @@ gulp.task('compile', function(){
         .pipe(concat('style.css'))
         .pipe(autoprefixer())
         .pipe(minify())
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('./'))
         .pipe(browserSync.stream());
 });
 
@@ -34,14 +34,14 @@ gulp.task('js', function(){
     return gulp.src('src/js/**/*.js')
     .pipe(concat('script.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest('assets/js'))
     .pipe(browserSync.stream());
  });
 
 gulp.task("watch", function(done) {
     browserSync.init({
         server: "./",
-        startPath: "/dist/index.html", // After it browser running
+        startPath: "/index.php", // After it browser running
         browser: 'firefox',
         host: 'localhost',
         port: 4000,
