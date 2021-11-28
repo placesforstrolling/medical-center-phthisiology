@@ -5,11 +5,11 @@
         <?php the_custom_logo(); ?>
           <div>
             
-            <p><?php the_field('phone_number_1'); ?></p>
-            <p><?php the_field('phone_number_2'); ?></p>
+            <p><?php the_field('phone_number_1', 2); ?></p>
+            <p><?php the_field('phone_number_2', 2); ?></p>
           </div>
           <div>
-            <p class="mail"><b><?php the_field('email'); ?></b></p>
+            <p class="mail"><b><?php the_field('email', 2); ?></b></p>
           </div>
           <div>
             <a href="#"><i class="fab fa-linkedin"></i></i>

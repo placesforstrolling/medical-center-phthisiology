@@ -17,6 +17,7 @@
       <div class="row under-menu">
         <div class="col-lg-12">
           <nav class="navbar under-menu-in">
+            
             <ul class="left">
               <li class="link">
                 <a href="#">English</a>
@@ -60,6 +61,7 @@
       </div>
       <div class="row">
         <nav class="navbar navbar-expand-xl navbar-light bg-light">
+        
             <div class="container-fluid">
               <div class="navbar-brand" href="#">
                <?php the_custom_logo(); ?>
@@ -70,7 +72,24 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
+              <?php
+              // свой класс построения меню:
+
+            wp_nav_menu( [
+              'theme_location'  => 'header-menu',
+              'container'       => false,
+               'menu_class'     => 'navbar-nav',
+              'menu_id'         => '',
+              'echo'            => true,
+              'fallback_cb'     => 'wp_page_menu',
+              'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
+              'depth'           => 3,
+              'walker'          => '',
+            ] );
+            
+            ?>
+                <!-- <ul class="navbar-nav">
+               
                   <li class="nav-item">
                     <a class="nav-link" href="#">Главная</a>
 
@@ -180,7 +199,7 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#">Контакты</a>
                   </li>
-                </ul>
+                </ul> -->
                 <a href="https://technomed.uz/OnlineRecord/AllDoctor?UniqueID=FF9E547268804594BDB98542CEF5AF25"
                   class="btn me-2">Онлайн запись на консультацию</a>
                 <!-- <form class="d-flex">

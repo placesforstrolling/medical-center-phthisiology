@@ -19,10 +19,27 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.navbar.bg-light').css('transform', 'translateY(0)').removeClass('scrolled')
   }
 
-
-  new Glide('.glide', {
-    type: 'carousel',
-    startAt: 0,
-    perView: 3
-  }).mount();
+  try{
+    new Glide('.glide', {
+      type: 'carousel',
+      startAt: 0,
+      perView: 3
+    }).mount();
+    }catch(e){
+    
+    functionToHandleError(e);
+    }
+  
+  $('.menu-item').addClass('nav-item');
+  $('.sub-menu li').addClass('sub-menu-link').removeClass('nav-item');
+  document.querySelectorAll('.nav-item').forEach((item) => {
+    if ($(item).children('.sub-menu').length > 0) {
+      $(item).children('.nav-link').addClass('dropped')
+    }
+  });
+  document.querySelectorAll('.sub-menu-link').forEach((item) => {
+    if ($(item).children('.sub-menu').length > 0) {
+      $(item).addClass('sub-sub')
+    }
+  });
 });
