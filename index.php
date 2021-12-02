@@ -1,6 +1,9 @@
 
 <?php
   get_header();
+  // UPDATE wp_options SET option_value = replace(option_value, 'http://medical',' https://pizzauzuz.000webhostapp.com') WHERE option_name = 'home' OR option_name = 'siteurl'; 
+  // UPDATE wp_posts SET guid = replace(guid, 'http://medical',' https://pizzauzuz.000webhostapp.com'); 
+  // UPDATE wp_posts SET post_content = replace(post_content, 'http://medical',' https://pizzauzuz.000webhostapp.com'); 
 ?>
 
     <div id="carouselExampleControls" class="carousel slide header-slide" data-bs-ride="carousel">
@@ -137,77 +140,115 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
+      <?php
+          // параметры по умолчанию
+          $my_posts = get_posts( array(
+            'numberposts' => 3,
+            'category_name'    => 'news',
+            'orderby'     => 'date',
+            'order' => 'ASC',
+            'post_type'   => 'post',
+            'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+          ) );
+
+          foreach( $my_posts as $post ){
+            setup_postdata( $post );
+            ?>
+      <div class="col-md-4">
           <div class="item">
             <div class="image">
-              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/new1.jpg" alt="New">
+              <img src="<?php the_field('news_image'); ?>" alt="New">
             </div>
             <div class="item-body">
-              <p class="date">3 Ноября 2021</p>
-              <h3>Диагностика болезней и инфекций</h3>
-              <p>Прогнозируемый опыт на основе мультимедиа и стратегии кросс-медиа роста. Легко визуализируйте
-                качественный интеллектуальный капитал без превосходного сотрудничества и ...</p>
-              <a href="#" class="more">Читать полностью <i class="fas fa-arrow-circle-right"></i></a>
+              <p class="date"><?php the_time('j F Y'); ?></p>
+              <h3><?php echo get_the_title(); ?></h3>
+              <p><?php echo kama_excerpt( [ 'maxchar'=>200, 'text'=>get_field('news_text') ] );  ?></p>
+              <a href="<?php the_permalink(); ?>" class="more">Читать полностью <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="item">
-            <div class="image">
-              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/new2.jpg" alt="New">
-            </div>
-            <div class="item-body">
-              <p class="date">3 Ноября 2021</p>
-              <h3>Диагностика болезней и инфекций</h3>
-              <p>Прогнозируемый опыт на основе мультимедиа и стратегии кросс-медиа роста. Легко визуализируйте
-                качественный интеллектуальный капитал без превосходного сотрудничества и ...</p>
-              <a href="#" class="more">Читать полностью <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="item">
-            <div class="image">
-              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/new3.jpg" alt="New">
-            </div>
-            <div class="item-body">
-              <p class="date">3 Ноября 2021</p>
-              <h3>Диагностика болезней и инфекций</h3>
-              <p>Прогнозируемый опыт на основе мультимедиа и стратегии кросс-медиа роста. Легко визуализируйте
-                качественный интеллектуальный капитал без превосходного сотрудничества и ...</p>
-              <a href="#" class="more">Читать полностью <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-        </div>
+      <?php
+          }
+
+          wp_reset_postdata(); // сброс
+        ?>
+        <!-- ///////////////////// -->
+
+
       </div>
     </div>
   </section>
 
   <section class="current">
     <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-3 col-md-4">
+      <div class="row text-center">
+      <div class="col-xl-3 col-md-5 col-4">
+         
+        </div>
+        <div class="col-xl-3 col-md-2 col-2">
           <div class="item">
-            <i class="fas fa-procedures"></i>
-            <h3><?php the_field('current_all'); ?></h3>
+          <i class="fas fa-hospital"></i>
             <p>Общее количество <br> коек</p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4">
+        <div class="col-xl-3 col-md-2 col-3">
           <div class="item">
             <i class="fas fa-bed"></i>
-            <h3><?php the_field('current_free'); ?></h3>
             <p>Количество свободных <br> коек</p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4">
+        <div class="col-xl-3 col-md-2 col-3">
           <div class="item">
-            <i class="fas fa-hospital"></i>
-            <h3><?php the_field('current_day'); ?></h3>
-            <p>Свободные места для дневного стационара</p>
+            <i class="fas fa-procedures"></i>
+            <p>Количество занятых <br> коек</p>
           </div>
         </div>
       </div>
+      <?php
+          // параметры по умолчанию
+          $my_posts = get_posts( array(
+            'numberposts' => -1,
+            'category_name'    => 'free_places',
+            'orderby'     => 'date',
+            'order' => 'ASC',
+            'post_type'   => 'post',
+            'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+          ) );
+
+          foreach( $my_posts as $post ){
+            setup_postdata( $post );
+            ?>
+      <div class="row">
+        <div class="col-xl-3 col-md-5 col-4">
+          <div class="item">
+            <p><?php echo get_the_title(); ?></p>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-2 col-2">
+          <div class="item">
+            <h3><?php the_field('total'); ?></h3>
+          </div>
+          
+        </div>
+        <div class="col-xl-3 col-md-2 col-3">
+          <div class="item">
+            <h3><?php the_field('occupied'); ?></h3>
+          </div>
+          
+        </div>
+        <div class="col-xl-3 col-md-2 col-3">
+          <div class="item">
+            <h3><?php the_field('free'); ?></h3>
+          </div>
+          
+        </div>
+      </div>
+      <?php
+          }
+
+          wp_reset_postdata(); // сброс
+        ?>
+    <!-- /////////////// -->
     </div>
   </section>
 

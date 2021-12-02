@@ -10,7 +10,7 @@ Template name: История центра
 
 <div class="header-slide">
         <div class="carousel-item active">
-            <img src="./img/header-bg1.jpg" class="header-background" alt=""> 
+            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/header-bg1.jpg" class="header-background" alt=""> 
         </div>
     </div>
     
@@ -32,7 +32,7 @@ Template name: История центра
       <div class="container first">
           <div class="row justify-content-between">
               <div class="col-lg-6">
-                  <img src="./img/center-building.jpg" alt="TB center">
+                  <img src="<?php echo bloginfo('template_url'); ?>/assets/img/center-building.jpg" alt="TB center">
               </div>
               <div class="col-lg-5">
                     <h3>Наша история</h2>

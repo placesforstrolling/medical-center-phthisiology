@@ -20,14 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   try{
+    let perView = 3;
+    if (window.screen.width < 767) {
+      perView = 2;
+    }
     new Glide('.glide', {
       type: 'carousel',
       startAt: 0,
-      perView: 3
+      perView: perView
     }).mount();
     }catch(e){
     
-    functionToHandleError(e);
+    console.log('Error');
     }
   
   $('.menu-item').addClass('nav-item');

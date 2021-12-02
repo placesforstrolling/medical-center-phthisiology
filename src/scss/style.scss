@@ -480,27 +480,34 @@ header {
 }
 
 .current {
-    background-image: url('../img/current.jpg');
+    background-image: url('./assets/img/current.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding: 70px 0;
-
+    .row {
+        border-top: 1px solid rgba(255, 255, 255, 0.246);
+        align-items: center;
+        &:first-child {
+            border: none;
+        }
+    }
     .item {
-
+        text-align: center;
         .fas {
-            font-size: 45px;
+            font-size: 25px;
             color: $white;
         }
 
         h3 {
-            font-size: 50px;
+            font-size: 30px;
             color: $light-blue;
         }
 
         p {
-            font-size: 20px;
+            font-size: 16px;
             color: $white;
+            margin-bottom: 5px;
         }
     }
 }
@@ -636,7 +643,7 @@ header {
 
 footer {
     background-color: $dark-blue;
-    padding: 80px 0 30PX 0;
+    padding: 50px 0 30px 0;
 
     .left {
         display: flex;
@@ -688,7 +695,7 @@ footer {
     }
 
     .navbar {
-        margin-top: 60px;
+        margin-top: 20px;
 
         .nav-item {
             color: $white;
@@ -909,8 +916,13 @@ footer {
             }
         }
     }
-    .current .item p {
-        font-size: 18px;
+    .current .item {
+        p {
+            font-size: 16px;
+        }
+        h3 {
+            font-size: 24px;
+        }
     }
 }
 @media (max-width: 991px) {
@@ -984,8 +996,13 @@ footer {
             }
         }
     }
-    .current .item p {
-        font-size: 16px;
+    .current .item {
+        p {
+            font-size: 14px;
+        }
+        h3 {
+            font-size: 20px;
+        }
     }
     .gov .glide {
     .glide__slide {
@@ -1037,11 +1054,105 @@ footer {
                     font-size: 15px;
                 }
             }
-            
+        }
+        .left {
+            img {
+                width: 80px;
+                margin-right: 20px;
+            }
+            p {
+                font-size: 16px;
+            }
+            div {
+                margin-right: 20px;
+            }
         }
     }
 }
     
-@media (max-width: 852px) {
+@media (max-width: 767px) {
+    header {
+        .navbar.bg-light .navbar-brand img {
+            width: 100px;
+        }
+        .xtra-header {
+            border-radius: 10px;
+            .xtra-header-items {
+                .item {
+                    p {
+                    margin-right: 5px;
+                    font-size: 14px;
+                    }
+                    
+                    padding: 10px;
+                    h3 {
+                        font-size: 15px;
+                        margin-bottom: 20px;
+                    }
+                    .phone {
+                        font-size: 12px;
+                    }
+                    .d-flex {
+                        p {
+                            margin-right: 5px;
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                    .but {
+                        text-align: left;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .news .item {
+        margin-bottom: 20px;
+        .image {
+        height: 150px;
+        } 
+    }
+    .map .map-content {
+        padding: 10px 20px 20px;
+        max-width: 300px;
+        h4 {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .icon {
+            margin-right: 10px;
+        }
+        p {
+            font-size: 12px;
+            margin-bottom: 7px;
+        }
+    }
+    .gov .glide .glide__slide {
+        padding: 10px;
+        
+    }
+    footer {
+        padding: 50px 0 30px;
+        .left {
+            p {
+                font-size: 14px;
+            }
+            a {
+                font-size: 16px;
+                margin-right: 5px;
+            }
+            div {
+                margin-right: 10px;
+            }
+        }
+        .navbar {
+            margin-top: 30px;
+            p {
+                margin: auto;
+            }
+        }
+    }
     
 }
