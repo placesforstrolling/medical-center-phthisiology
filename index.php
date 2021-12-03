@@ -1,5 +1,6 @@
 
 <?php
+
   get_header();
   // UPDATE wp_options SET option_value = replace(option_value, 'http://medical',' https://pizzauzuz.000webhostapp.com') WHERE option_name = 'home' OR option_name = 'siteurl'; 
   // UPDATE wp_posts SET guid = replace(guid, 'http://medical',' https://pizzauzuz.000webhostapp.com'); 
@@ -339,8 +340,4 @@
 
 <?php
   get_footer();
-?>
-
-<?php
-  
 ?>
