@@ -788,7 +788,47 @@ footer {
         }
     }
 }
-
+.leadership {
+    padding: 60px 0;
+    background-color: #777AF212;
+    .item {
+        padding: 20px;
+        box-shadow: 0 10px 35px rgba(38,42,76,.1);
+        text-align: center;
+        img {
+            border-radius: 10px;
+        }
+        h5 {
+            font-size: 26px;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+        .role {
+            margin-bottom: 20px;
+            color: #7c7c7c;
+            display: block;
+        }
+    }
+    .glide__arrows {
+        text-align: center;
+    }
+    .btn {
+        margin-top: 30px;
+    }
+}
+.leader {
+    padding: 50px 0;
+    img {
+        border-radius: 8px;
+        box-shadow: -10px 10px 20px 1px rgba(0,0,0,.4);
+    }
+    h5 {
+        margin-top: 20px;
+    }
+    .role {
+        
+    }
+}
 @media (max-width: 1747px) {
     header {
         .navbar.bg-light {

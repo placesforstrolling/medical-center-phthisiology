@@ -147,7 +147,7 @@
             'numberposts' => 3,
             'category_name'    => 'news',
             'orderby'     => 'date',
-            'order' => 'ASC',
+            'order' => 'DESC',
             'post_type'   => 'post',
             'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
           ) );
