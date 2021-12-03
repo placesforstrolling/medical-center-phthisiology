@@ -18,9 +18,9 @@ Template name: Контакты
         <div class="row">
           <div class="col-lg-12">
             <div class="content">
-              <h1>История центра</h1>
+              <h1>Контакты</h1>
               <div class="breadcrumbs">
-                  <a href="./index.html">Главная</a> / <a href="#">О центре</a> / <a href="#">История центра</a>
+              <?php yoast_breadcrumb( '<nav class="yoast-breadcrumbs">', '</nav>' ); ?>
               </div> 
             </div>
           </div>
@@ -28,33 +28,78 @@ Template name: Контакты
       </div>
   </header>
 
-  <section class="history">
-      <div class="container first">
-          <div class="row justify-content-between">
-              <div class="col-lg-6">
-                  <img src="./img/center-building.jpg" alt="TB center">
-              </div>
-              <div class="col-lg-5">
-                    <h3>Наша история</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dicta harum minus debitis aut vitae, pariatur reiciendis sit saepe eius. Harum nam pariatur atque aspernatur, rerum quae voluptatum labore accusamus magni, minima maiores eum fugiat cupiditate tempora aliquid odit autem provident obcaecati, exercitationem nihil saepe ipsam enim molestiae facilis. Consectetur.</p>
-                    <a href="#" class="btn">Записаться на консультацию</a>
-              </div>
-          </div>
-      </div>
-      <div class="container second">
-          <div class="row justify-content-between">
-             
-              <div class="col-lg-5">
-                    <h3>Посмотрите видеоролик о нашем центре</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dicta harum minus debitis aut vitae, pariatur reiciendis sit saepe eius. Harum nam pariatur atque aspernatur, rerum quae voluptatum labore accusamus magni, minima maiores eum fugiat cupiditate tempora aliquid odit autem provident obcaecati, exercitationem nihil saepe ipsam enim molestiae facilis. Consectetur.</p>
-              </div>
-              <div class="col-lg-6">
-                <iframe src="https://www.youtube.com/embed/hJH5AflSPD4?loop=1&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-          </div>
-      </div>
+  <section class="contacts">
+    <div class="container">
+       <div class="row text-center">
+           <div class="col-lg-12">
+               <h2>Данные областных противотуберкулёзных диспансеров</h2>
+           </div>
+       </div>
+
+       <div class="row">
+           <div class="col-lg-12">
+               <div class="city-item">
+                   <div class="item">
+                       <p>Регион</p>
+                   </div>
+                   <div class="item">
+                       <p>ФИО главного врача</p>
+                   </div>
+                   <div class="item">
+                       <p>Номер телефона</p>
+                   </div>
+                   <div class="item">
+                       <p>Email</p>
+                   </div>
+                   
+               </div>
+           </div>
+       </div>
+    </div>
   </section>
 
+
+  <section class="map">
+    <div id="map">
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9e65407916cfe9ef3dd88c07ea049eaa17353a82c96c0727e664ecdc040a6620&amp;source=constructor" width="100%" height="500" frameborder="0"></iframe>
+      <div class="map-content">
+        <div class="d-flex">
+          <span class="icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </span>
+          <div class="txt">
+            <h4><?php the_field('main_address', 2); ?></h4>
+            <p>Знайте наши офисы и филиалы. Свяжитесь с нами сегодня.</p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <span class="icon">
+            <i class="fas fa-phone"></i>
+          </span>
+          <div class="txt">
+            <h4><span class="fir"><?php the_field('phone_number_1', 2); ?></span> <span class="slash">/</span> <span class="sec"><?php the_field('phone_number_2', 2); ?></span></h4>
+            <p>Посетите нашу страницу записи на прием, чтобы найти удобное для вас время</p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <span class="icon">
+            <i class="far fa-clock"></i>
+          </span>
+          <div class="txt">
+            <h4>Часы работы</h4>
+            <div class="d-flex">
+              <p>Пн-Пт:</p>
+              <p><?php the_field('schedule_1', 2); ?></p>
+            </div>
+            <div class="d-flex">
+              <p>Сб-Вс:</p>
+              <p><?php the_field('schedule_2', 2); ?></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 <?php
     get_footer();
 ?>

@@ -1,53 +1,37 @@
 <?php
-/**
- * The template for displaying search results pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package Medical
- */
-
 get_header();
 ?>
-
+<div class="header-slide">
+        <div class="carousel-item active">
+            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/header-bg1.jpg" class="header-background" alt=""> 
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="content">
+              <h1><?php the_title(); ?></h1>
+              <div class="breadcrumbs">
+                  <a href="./index.html">Главная</a> / <a href="#">О центре</a> / <a href="#">История центра</a>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+  </header>
 	<main id="primary" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+		<?php
+		while ( have_posts() ) :
+			the_post();
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'medical' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
+			get_template_part( 'template-parts/content', get_post_type() );
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
+		endwhile; // End of the loop.
 		?>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

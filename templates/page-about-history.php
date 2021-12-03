@@ -20,7 +20,7 @@ Template name: История центра
             <div class="content">
               <h1>История центра</h1>
               <div class="breadcrumbs">
-                  <a href="./index.html">Главная</a> / <a href="#">О центре</a> / <a href="#">История центра</a>
+                  <?php yoast_breadcrumb( '<nav class="yoast-breadcrumbs">', '</nav>' ); ?>
               </div> 
             </div>
           </div>
