@@ -7,9 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const underMenuHei = $('header .under-menu').outerHeight();
     const scrolled = window.pageYOffset || document.documentElement.scrollTop;
     if (scrolled >= underMenuHei) {
-      $('.navbar.bg-light').css('transform', 'translateY(-' + (underMenuHei) + 'px)').addClass('scrolled')
+      $('.navbar.bg-light').css('transform', 'translateY(-' + (underMenuHei) + 'px)').addClass('scrolled');
     } else {
-      $('.navbar.bg-light').css('transform', 'translateY(0)').removeClass('scrolled')
+      $('.navbar.bg-light').css('transform', 'translateY(0)').removeClass('scrolled');
+    }
+    if (window.screen.width < 1200) {
+      $('.navbar.bg-light').addClass('scrolled')
     }
   })
 
@@ -18,7 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     $('.navbar.bg-light').css('transform', 'translateY(0)').removeClass('scrolled')
   }
-
+  if (window.screen.width < 1200) {
+    $('.navbar.bg-light').addClass('scrolled')
+  }
   try{
     let perView = 3;
     if (window.screen.width < 767) {

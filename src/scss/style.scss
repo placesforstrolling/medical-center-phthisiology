@@ -166,6 +166,13 @@ header {
                 }
             }
         }
+        .title {
+            display: none;
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+            max-width: 370px;
+        }
         .navbar-brand img {
             width: 130px;
             transition: .8s;
@@ -967,6 +974,17 @@ footer {
             .navbar-brand {
                 width: 100px;
             }
+            .btn {
+                max-width: 100%;
+                position: static;
+                right: 0;
+                top: 0;
+            }
+            .title {
+                display: inline-block;
+                font-weight: 600;
+                transform: translateY(20px);
+            }
         }
         .xtra-header {
             .xtra-header-items {
@@ -1278,6 +1296,55 @@ footer {
             iframe {
                 width: 80%;
                 min-height: 250px;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    header {
+        .navbar.bg-light {
+            .navbar-brand img {
+                width: 75px;
+            }
+            .title {
+                font-size: 12px;
+                transform: translateY(15px);
+            }
+            .container-fluid {
+                padding: 0;
+            }
+            .navbar-toggler {
+                margin-right: 12px;
+            }
+        }
+        .navbar.bg-light.scrolled {
+            .navbar-brand img {
+                width: 75px;
+            }
+        }
+        .under-menu-in {
+            justify-content: center;
+        }
+        .under-menu ul .link a {
+            font-size: 14px;
+            margin: 0 2px;
+        }
+    }
+}
+@media (max-width: 450px) {
+    header {
+        .navbar.bg-light {
+            .navbar-brand img {
+                width: 65px;
+            }
+            .title {
+                font-size: 10px;
+                transform: translateY(10px);
+            }
+        }
+        .navbar.bg-light.scrolled {
+            .navbar-brand img {
+                width: 65px;
             }
         }
     }

@@ -26,7 +26,7 @@
 
         <div class="col-lg-12">
           <nav class="navbar navbar-expand-lg">
-            <p class="nav-item">© 2021 <b>Mustafa</b> Technologies Inc.</p>
+            <p class="nav-item">© 2021 <b>"Республиканский специализированный научно - <br> практический медицинский центр фтизиатрии и пульмонологии"</b> </p>
 
 
             <ul class="navbar-nav m-auto">

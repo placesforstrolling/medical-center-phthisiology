@@ -34,10 +34,10 @@
                 <a href="#"><i class="far fa-eye"></i></a>
               </li>|
               <li class="link">
-                <a href="#"><i class="fas fa-sitemap"></i></a>
+                <a href="<?php echo get_home_url(); ?>/sitemap_index.xml"><i class="fas fa-sitemap"></i></a>
               </li>|
               <li class="link">
-                <a href="#" targer="_blank"><i class="fas fa-rss"></i></a>
+                <a href="<?php echo get_home_url(); ?>/feed" targer="_blank"><i class="fas fa-rss"></i></a>
               </li>|
               <li class="link">
                 <a id="mobileView" href="#"><i class="fas fa-mobile-alt"></i></a>
@@ -46,13 +46,13 @@
                 <a href="#" onClick="window.print()"><i class="fas fa-print"></i></a>
               </li>|
               <li class="link">
-                <a href="#"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/gerb.png" alt="Gerb"></a>
+                <a href="<?php echo get_home_url(); ?>/gerb"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/gerb.png" alt="Gerb"></a>
               </li>
               <li class="link">
-                <a href="#"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/flag.png" alt="Flag"></a>
+                <a href="<?php echo get_home_url(); ?>/flag"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/flag.png" alt="Flag"></a>
               </li>
               <li class="link">
-                <a href="#"><i class="fas fa-music"></i></a>
+                <a href="<?php echo get_home_url(); ?>/gimn"><i class="fas fa-music"></i></a>
               </li>|
             </ul>
           </nav>
@@ -65,6 +65,8 @@
             <div class="container-fluid">
               <div class="navbar-brand" href="#">
                <?php the_custom_logo(); ?>
+               <span class="title">Республиканский специализированный<br> научно - 
+практический медицинский центр <br>фтизиатрии и пульмонологии</span>
                 </div>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"

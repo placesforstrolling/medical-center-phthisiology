@@ -1,25 +1,27 @@
 
 <?php
-//   get_header();
+  get_header();
 ?>
 <style>
     @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500);
     header {
         background-color: #007aff;
     }
-    footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-    }
+ 
     body {
-    font-family: "Roboto", sans-serif;
+    
     background-color: #007aff;
     color: #fff;
     min-height: 100vh;
     overflow: hidden;
 }
-
+footer {
+        visibility: hidden;
+        
+    }
+    footer .container {
+      padding-top: 0;
+    }
 .button {
   font-weight: 300;
   color: #fff;
@@ -50,8 +52,8 @@ p.oops {
 }
 
 h1 {
-    
-    margin: 150px 0 30px 0;
+  font-family: "Roboto", sans-serif;
+    margin: 220px 0 30px 0;
   text-align: center;
   font-size: 150px;
   font-weight: 100;
@@ -65,5 +67,5 @@ h1 {
 
 
 <?php
-//   get_footer();
+  get_footer();
 ?>

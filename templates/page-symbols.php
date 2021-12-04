@@ -1,6 +1,6 @@
 <php
 /*
-Template name: Пресс-центр
+Template name: Государственные символы
 */
 ?>
 
@@ -30,26 +30,20 @@ Template name: Пресс-центр
 
   <section class="history">
       <div class="container first">
-      <?
-          
-$news = new WP_Query(array( //создаем экземпляр класса
-    'post_type' => 'page', // выбираем тип записи которые нужно показывать
-    'post_parent' => get_the_ID() // выбираем родителя чьи посты показывать
-    )
-  );
-if($news->have_posts()) {
-  while($news->have_posts()){
-	$news->the_post(); ?>
-	<h2><?=get_the_title();?></h2>
-	<img src="<?=get_the_post_thumbnail_url( get_the_id(), 'thumbnail' );?>">
-	<p><?=get_the_excerpt();?></p>
-	<p><a href="<?=get_the_permalink();?>">Подробнее</a></p>
-<?
-  }
-}
-wp_reset_query();
-
-?>
+        <div class="row text-center justify-content-center">
+            <div class="col-lg-6">
+                <img src="<?php the_field('image'); ?>" alt="Symbol" class="p-4">
+            </div>
+            <div class="col-lg-12">
+            
+                <h2 class="mt-5 mb-4"><?php the_field('headtag'); ?></h2>
+                
+               
+            </div>
+            <div class="col-lg-10">
+            <p><?php the_field('text'); ?></p>
+            </div>
+        </div>
       </div>
     
   </section>
