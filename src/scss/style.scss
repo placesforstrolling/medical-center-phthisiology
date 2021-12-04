@@ -985,6 +985,69 @@ footer {
                 font-weight: 600;
                 transform: translateY(20px);
             }
+            .btn {
+                margin: 20px 0;
+            }
+            .nav-item {
+                .sub-menu {
+                    position: static;
+                    opacity: 1;
+                    display: none;
+                    transition: .3s;
+                    transform: translateY(0);
+                    visibility: visible;
+                    .sub-menu {
+                        visibility: visible;
+                        position: static;
+                        transform: translateX(0);
+                        
+                        &:hover {
+                            visibility: visible;
+                            opacity: 1;
+                            transform: translateX(0);
+                        }
+                    }
+    
+                    .sub-menu-link a {
+                        text-decoration: none;
+                        color: #5C5E6C;
+                        display: block;
+                        font-weight: 500;
+                        transition: .2s;
+                        padding: 5px 25px 5px 25px;
+    
+                        &:hover {
+                            color: $light-blue;
+    
+                            &+.sub-menu {
+                                visibility: visible;
+                                opacity: 1;
+                                transform: translateX(101%);
+                            }
+                        }
+                    }
+    
+                    &:hover {
+                        visibility: visible;
+                        display: block;
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }
+    
+                }
+    
+                .nav-link {
+                    &:hover {
+                        &+.sub-menu {
+                            visibility: visible;
+                            display: block;
+                            opacity: 1;
+                            transform: translateY(0px);
+                        }
+                    }
+                }
+    
+            }
         }
         .xtra-header {
             .xtra-header-items {
