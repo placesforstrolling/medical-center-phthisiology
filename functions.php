@@ -9,13 +9,20 @@ function medical_styles() {
     wp_enqueue_style('font-awesome-style', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css');
     wp_enqueue_style('montserrat-style', 'http://fonts.cdnfonts.com/css/montserrat');
     wp_enqueue_style('bootstrap-style', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css');
-    wp_enqueue_style('medical-style', get_stylesheet_uri());
+    // if (is_page(164)){
+	// 	wp_enqueue_style('magnific-style', 'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js');
+	// 	} 
+	wp_enqueue_style('medical-style', get_stylesheet_uri());
 };
 function medical_scripts() {
     wp_enqueue_script('glide-script', 'https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js', array(), null, true);
     wp_enqueue_script('bootstrap-script', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js', array(), null, true);
     wp_enqueue_script('jquery-script', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
-    wp_enqueue_script('script-script', get_template_directory_uri() . '/assets/js/script.js', array('jquery-script'), null, true);
+    // if (is_page(164)){
+	// 	wp_enqueue_script('popup-script', 'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js', array(), null, true);
+	// 	} 
+	wp_enqueue_script('script-script', get_template_directory_uri() . '/assets/js/script.js', array('jquery-script'), null, true);
+	
 };
 function menu() {
     register_nav_menus([
