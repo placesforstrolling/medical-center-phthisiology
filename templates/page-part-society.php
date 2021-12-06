@@ -10,7 +10,7 @@ Template name: Общество
 
 <div class="header-slide">
         <div class="carousel-item active">
-            <img src="./img/header-bg1.jpg" class="header-background" alt=""> 
+            <img src="<?php the_field('bg-image') ?>" class="header-background" alt=""> 
         </div>
     </div>
     
@@ -18,9 +18,9 @@ Template name: Общество
         <div class="row">
           <div class="col-lg-12">
             <div class="content">
-              <h1>История центра</h1>
+            <h1><?php the_title(); ?></h1>
               <div class="breadcrumbs">
-                  <a href="./index.html">Главная</a> / <a href="#">О центре</a> / <a href="#">История центра</a>
+                  <?php yoast_breadcrumb( '<nav class="yoast-breadcrumbs">', '</nav>' ); ?>
               </div> 
             </div>
           </div>

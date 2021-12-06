@@ -38,7 +38,7 @@ Template name: Видео центра
                     <p>Погрузитесь в наш центр через ролик и виртуально посетите все отделения республиканского специализированного научно-практического медицинского центра фтизиатрии и пульмонологии</p>
               </div>
               <div class="col-lg-6">
-                <iframe src="https://www.youtube.com/embed/hJH5AflSPD4?loop=1&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <?php the_field('video', 2); ?>
             </div>
           </div>
       </div>

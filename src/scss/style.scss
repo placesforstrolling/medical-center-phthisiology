@@ -774,6 +774,55 @@ footer {
             }
         }
     }
+    .advice, .library {
+        .col-lg-4 {
+            margin-bottom: 20px;
+        }
+        .item {
+            padding: 20px;
+            background: $light-blue;
+            color: #fff;
+            text-align: center;
+            height: 100%;
+            border-radius: 20px;
+            transition: .4s;
+            .fas {
+                color: #fff;
+                font-size: 60px;
+                margin-bottom: 10px;
+            }
+            h4 {
+                font-size: 25px;
+                color: #fff;
+                margin-bottom: 0;
+            }
+            .role {
+                font-size: 15px;
+                margin-bottom: 10px;
+                display: inline-block;
+                color: $dark-blue;
+                transition: .4s;
+            }
+            p {
+                color: #fff;
+                font-weight: 300;
+            }
+            &:hover {
+                background: $dark-blue;
+                .role {
+                    color: $light-blue;
+                }
+            }
+        }
+    }
+    .library {
+        a {
+            text-decoration: none;
+        }
+        h4 {
+            font-size: 20px!important;
+        }
+    }
 }
 
 .contacts {
