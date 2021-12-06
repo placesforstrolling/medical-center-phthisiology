@@ -38,15 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
   function mobileMenu() {
     if (window.screen.width < 1200) {
       $('.navbar.bg-light').addClass('scrolled');
-      const links = document.querySelectorAll('.nav-item .dropped');
-      console.log(links);
+      
+    }
+    const links = document.querySelectorAll('.nav-item .dropped');
       links.forEach(item => {
         item.addEventListener('click', (e) => {
           e.preventDefault();
-          alert(1);
         });
       });
-    }
   }
 
   function normalizeMenu() {

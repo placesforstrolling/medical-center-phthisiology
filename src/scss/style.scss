@@ -755,6 +755,25 @@ footer {
             border-radius: 8px;
         }
     }
+    .accordion {
+        .accordion-item {
+          z-index: 1;  
+        }
+        .accordion-button {
+            background: $light-blue;
+            border-radius: 15px;
+            color: #fff;
+            z-index: 1; 
+            &.collapsed {
+                background: #fff;
+                color: #000;
+                
+            }
+            &:focus {
+               box-shadow: none; 
+            }
+        }
+    }
 }
 
 .contacts {
