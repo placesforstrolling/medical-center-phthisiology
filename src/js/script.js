@@ -53,12 +53,15 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.sub-menu li').addClass('sub-menu-link').removeClass('nav-item');
     document.querySelectorAll('.nav-item').forEach((item) => {
       if ($(item).children('.sub-menu').length > 0) {
-        $(item).children('.nav-link').addClass('dropped')
+        $(item).children('.nav-link').addClass('dropped');
       }
     });
     document.querySelectorAll('.sub-menu-link').forEach((item) => {
       if ($(item).children('.sub-menu').length > 0) {
-        $(item).addClass('sub-sub')
+        $(item).addClass('sub-sub');
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+        });
       }
     });
   }

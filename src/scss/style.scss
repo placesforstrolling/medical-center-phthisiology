@@ -823,6 +823,12 @@ footer {
             font-size: 20px!important;
         }
     }
+    .chair {
+        img {
+            margin-top: 25px;
+            margin-bottom: 20px;
+        }
+    }
 }
 
 .contacts {
@@ -1296,6 +1302,7 @@ footer {
         .navbar {
             .navbar-nav {
                 flex-direction: row;
+                margin-top: 30px!important;
                 .nav-link {
                     margin-right: 10px;
                     font-size: 15px;
@@ -1480,6 +1487,16 @@ footer {
             font-size: 14px;
             margin: 0 2px;
         }
+    }
+    footer {
+        .left{
+            flex-wrap: wrap;
+           & > * {
+                flex-basis: 50%;
+                margin-left: 0!important;
+                margin-right: 0!important;
+            }
+        } 
     }
 }
 @media (max-width: 450px) {
