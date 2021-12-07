@@ -43,7 +43,7 @@
                 $field = get_field('slider_btn');
                 if ($field == 'on') {
                   ?>
-                    <a href="<?php the_field('slider_btn_link') ?>" class="btn"><?php the_field('slider_btn_text') ?></a>;
+                    <a href="<?php the_field('slider_btn_link') ?>" class="btn"><?php the_field('slider_btn_text') ?></a>
                   <?php
                   
                 }
@@ -121,7 +121,7 @@
               <h3>Новости</h3>
               <p>Последние новости медицнского центра</p>
               <div class="but">
-                <a class="btn" href="#">Все новости</a>
+                <a class="btn" href="<?php echo get_home_url(); ?>/press-centr/novosti-centra/">Все новости</a>
               </div>
               
             </div>
