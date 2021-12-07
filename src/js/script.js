@@ -59,11 +59,15 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.sub-menu-link').forEach((item) => {
       if ($(item).children('.sub-menu').length > 0) {
         $(item).addClass('sub-sub');
-        item.addEventListener('click', (e) => {
-          e.preventDefault();
-        });
+        
       }
     });
+    document.querySelectorAll('.sub-sub > a').forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+      });
+    });
+    
   }
 
 
