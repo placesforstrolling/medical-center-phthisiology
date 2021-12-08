@@ -37,7 +37,6 @@ Template name: Структура центра
               <div class="col-lg-5">
                     <h3>Структура нашего центра</h2>
                     <p><?php the_field('about-text'); ?></p>
-                    <a href="#" class="btn">Записаться на консультацию</a>
               </div>
               
           </div>
