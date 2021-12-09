@@ -31,7 +31,7 @@
             </ul>
             <ul class="right">
               <li class="link">
-                <a href="#"><i class="far fa-eye"></i></a>
+                <a href="#" class="eyeBtn"><i class="far fa-eye"></i></a>
               </li>|
               <li class="link">
                 <a href="<?php echo get_home_url(); ?>/sitemap_index.xml"><i class="fas fa-sitemap"></i></a>

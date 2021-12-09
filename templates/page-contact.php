@@ -27,7 +27,53 @@ Template name: Контакты
         </div>
       </div>
   </header>
-
+  <section class="history">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <h2>Республиканский специализированный научно -
+практический медицинский центр фтизиатрии и пульмонологии</h2>
+        </div>
+        <div class="col-lg-10">
+      <div class="map-content">
+        <div class="d-flex">
+          <span class="icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </span>
+          <div class="txt">
+            <h4><?php the_field('main_address', 2); ?></h4>
+            <p>Знайте наши офисы и филиалы. Свяжитесь с нами сегодня.</p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <span class="icon">
+            <i class="fas fa-phone"></i>
+          </span>
+          <div class="txt">
+            <h4><span class="fir"><?php the_field('phone_number_1', 2); ?></span> <span class="slash">/</span> <span class="sec"><?php the_field('phone_number_2', 2); ?></span></h4>
+            <p>Посетите нашу страницу записи на прием, чтобы найти удобное для вас время</p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <span class="icon">
+            <i class="far fa-clock"></i>
+          </span>
+          <div class="txt">
+            <h4>Часы работы</h4>
+            <div class="d-flex">
+              <p>Пн-Пт:</p>
+              <p><?php the_field('schedule_1', 2); ?></p>
+            </div>
+            <div class="d-flex">
+              <p>Сб-Вс:</p>
+              <p><?php the_field('schedule_2', 2); ?></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div></div>
+    </div>
+  </section>
   <section class="contacts">
     <div class="container">
        <div class="row text-center">

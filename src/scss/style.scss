@@ -12,7 +12,14 @@ $white: #fff;
     background: #4DB0E1;
     // \f078 down arrow
 }
-
+html {
+    &.eye-reverse {
+        filter: grayscale(100%) invert(100%);
+    }
+    &.eye-gray {
+        filter: grayscale(100%);
+    }
+}
 body {
     font-family: $font-stack;
     font-weight: 300, 400, 500, 600, 700;
@@ -52,6 +59,40 @@ body {
         color: $dark-p;
         font-size: 15px;
         font-weight: 400;
+    }
+
+    .opportunities {
+        position: fixed;
+        left: 50%;
+        top: 150%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        transition: .4s;
+        text-align: center;
+        box-shadow: -10px 10px 20px 1px rgba(0,0,0,.4);
+        padding: 25px 15px 15px 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        .d-flex {
+            align-items: center;
+            div {
+                margin: 20px 10px 0 10px;
+                font-size: 25px;
+                cursor: pointer;
+                color: $light-blue;
+            }
+        }
+        .closer {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            color: red;
+        }
+    }
+    .active {
+        top: 50%;
     }
 }
 
@@ -840,6 +881,53 @@ footer {
             margin-bottom: 20px;
         }
     }
+    .map-content {
+        background-color: $white;
+        padding: 20px 50px 50px 50px;
+        margin: auto;
+
+        .d-flex {
+            align-items: flex-start;
+            margin-top: 30px;
+
+            .d-flex {
+                width: 100%;
+                margin: 0;
+                justify-content: space-between;
+
+                p {
+                    margin-bottom: 0;
+                    margin-right: 40px;
+                }
+            }
+        }
+
+        .icon {
+            padding: 15px;
+            border: 1px solid rgba(56, 168, 224, 0.363);
+            height: auto;
+            margin-right: 30px;
+
+            .fas {
+                color: $light-blue;
+                font-size: 20px;
+            }
+
+            .far {
+                color: $light-blue;
+                font-size: 20px;
+            }
+        }
+
+        h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
 }
 
 .contacts {
@@ -893,7 +981,7 @@ footer {
         height: 100%;
         img {
             border-radius: 10px;
-            width: 100%;
+            width: 80%;
         }
         h5 {
             font-size: 26px;
@@ -911,7 +999,7 @@ footer {
         text-align: center;
     }
     .btn {
-        margin-top: 30px;
+        margin-top: 10px;
     }
 }
 .leader {
@@ -922,9 +1010,6 @@ footer {
     }
     h5 {
         margin-top: 20px;
-    }
-    .role {
-        
     }
 }
 @media (max-width: 1747px) {

@@ -71,4 +71,50 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
+  const eyeBtn = document.querySelector('.eyeBtn'),
+        opportunitie = document.querySelector('.opportunities'),
+        eyeReverse = opportunitie.querySelector('.eye-reverse'),
+        eyeGray = opportunitie.querySelector('.eye-gray'),
+        eyeNormal = opportunitie.querySelector('.eye-normal'),
+        eyeMinus = opportunitie.querySelector('.eye-minus'),
+        eyePlus = opportunitie.querySelector('.eye-plus'),
+        elements = document.getElementsByTagName("body")[0],
+        closer = opportunitie.querySelector('.closer');
+
+
+
+        eye(eyeReverse, 'eye-reverse');
+        eye(eyeGray, 'eye-gray');
+        eye(eyeNormal, '');
+
+        eyeMinus.addEventListener('click', () => {
+          changeFont(elements, -1);
+        });
+        eyePlus.addEventListener('click', () => {
+          changeFont(elements, 1);
+        });
+
+  closer.addEventListener('click', () => {
+    opportunitie.classList.remove('active');
+  });
+  eyeBtn.addEventListener('click', () => {
+    opportunitie.classList.toggle('active');
+  });
+  function eye (eye, str) {
+    eye.addEventListener('click', () => {
+      document.getElementsByTagName('html').className = str;
+    });
+  }
+  function changeFont(element, num){
+    let fontSize = Number(window.getComputedStyle(element).getPropertyValue('font-size').match(/\d+/)[0]) + (num);
+    let oldStyle = element.getAttribute('style');
+    if (oldStyle == null) {
+      oldStyle = '';
+    }
+    element.setAttribute("style", oldStyle + "font-size:" + fontSize + "px;");
+    for(var i=0; i < element.children.length; i++){
+        changeFont(element.children[i], num);
+    }
+}
+
 });

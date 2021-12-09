@@ -47,7 +47,29 @@
       </div>
     </div>
   </footer>
-
+  <div class="opportunities">
+    <h3>Специальные возможности</h3>
+    <div class="d-flex justify-content-center">
+      <div class="eye-plus">
+        <i class="far fa-plus-square"></i>
+      </div>
+      <div class="eye-minus">
+        <i class="far fa-minus-square"></i>
+      </div>
+      <div class="eye-reverse">
+        <i class="fas fa-file-alt"></i>
+      </div>
+      <div class="eye-gray">
+        <i class="far fa-file-alt"></i>
+      </div>
+      <div class="eye-normal">
+        <i class="far fa-file"></i>
+      </div>
+     
+    </div>
+    <i class="far fa-times-circle closer"></i>
+   
+  </div>
   <?php
     wp_footer();
   ?>
