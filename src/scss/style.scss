@@ -12,14 +12,6 @@ $white: #fff;
     background: #4DB0E1;
     // \f078 down arrow
 }
-html {
-    &.eye-reverse {
-        filter: grayscale(100%) invert(100%);
-    }
-    &.eye-gray {
-        filter: grayscale(100%);
-    }
-}
 body {
     font-family: $font-stack;
     font-weight: 300, 400, 500, 600, 700;
@@ -90,9 +82,22 @@ body {
             font-size: 16px;
             color: red;
         }
+        &.active {
+            top: 50%;
+        }
     }
-    .active {
-        top: 50%;
+
+    &.eye-reverse {
+        filter: grayscale(100%) invert(100%);
+        .opportunities {
+            visibility: hidden;
+        }
+    }
+    &.eye-gray {
+        filter: grayscale(100%);
+        .opportunities {
+            visibility: hidden;
+        }
     }
 }
 

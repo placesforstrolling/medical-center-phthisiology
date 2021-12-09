@@ -102,7 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   function eye (eye, str) {
     eye.addEventListener('click', () => {
-      document.getElementsByTagName('html').className = str;
+      document.body.className = str;
+      console.log(str)
     });
   }
   function changeFont(element, num){
