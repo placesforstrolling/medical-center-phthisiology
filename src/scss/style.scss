@@ -175,7 +175,7 @@ header {
                 width: 20px;
             }
 
-            .link a {
+            .lang-item a, .link a {
                 text-decoration: none;
                 margin: 0 5px;
                 color: #000;
@@ -1163,6 +1163,8 @@ footer {
             padding-bottom: 60px;
         }
         .navbar.bg-light {
+            max-height: 600px;
+            overflow-y: auto;
             .navbar-brand {
                 width: 100px;
             }

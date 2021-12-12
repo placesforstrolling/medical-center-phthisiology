@@ -19,15 +19,7 @@
           <nav class="navbar under-menu-in">
             
             <ul class="left">
-              <li class="link">
-                <a href="#">English</a>
-              </li>|
-              <li class="link">
-                <a href="#">Русский</a>
-              </li>|
-              <li class="link">
-                <a href="#">O'zbekcha</a>
-              </li>
+            <?php pll_the_languages(); ?>
             </ul>
             <ul class="right">
               <li class="link">
