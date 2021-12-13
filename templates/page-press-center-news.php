@@ -35,7 +35,7 @@ Template name: Новости центра
           // параметры по умолчанию
           $my_posts = get_posts( array(
             'numberposts' => -1,
-            'category_name'    => 'news',
+            'category_name'    => 'news'. $my_lang,
             'orderby'     => 'date',
             'order' => 'DESC',
             'post_type'   => 'post',
@@ -54,7 +54,7 @@ Template name: Новости центра
               <p class="date"><?php the_time('j F Y'); ?></p>
               <h3><?php echo get_the_title(); ?></h3>
               <p><?php echo kama_excerpt( [ 'maxchar'=>200, 'text'=>get_field('news_text') ] );  ?></p>
-              <a href="<?php the_permalink(); ?>" class="more">Читать полностью <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?php the_permalink(); ?>" class="more"><?php pll_e('Читать полностью'); ?> <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
         </div>

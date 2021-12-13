@@ -10,7 +10,7 @@ Template name: Филиалы центра
 
 <div class="header-slide">
         <div class="carousel-item active">
-            <img src="./img/header-bg1.jpg" class="header-background" alt=""> 
+        <img src="<?php the_field('bg-image') ?>" class="header-background" alt="Background"> 
         </div>
     </div>
     
@@ -18,9 +18,9 @@ Template name: Филиалы центра
         <div class="row">
           <div class="col-lg-12">
             <div class="content">
-              <h1>История центра</h1>
+              <h1><?php the_title(); ?></h1>
               <div class="breadcrumbs">
-                  <a href="./index.html">Главная</a> / <a href="#">О центре</a> / <a href="#">История центра</a>
+              <?php yoast_breadcrumb( '<nav class="yoast-breadcrumbs">', '</nav>' ); ?>
               </div> 
             </div>
           </div>
@@ -28,31 +28,73 @@ Template name: Филиалы центра
       </div>
   </header>
 
-  <section class="history">
-      <div class="container first">
-          <div class="row justify-content-between">
-              <div class="col-lg-6">
-                  <img src="./img/center-building.jpg" alt="TB center">
-              </div>
-              <div class="col-lg-5">
-                    <h3>Наша история</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dicta harum minus debitis aut vitae, pariatur reiciendis sit saepe eius. Harum nam pariatur atque aspernatur, rerum quae voluptatum labore accusamus magni, minima maiores eum fugiat cupiditate tempora aliquid odit autem provident obcaecati, exercitationem nihil saepe ipsam enim molestiae facilis. Consectetur.</p>
-                    <a href="#" class="btn">Записаться на консультацию</a>
-              </div>
-          </div>
-      </div>
-      <div class="container second">
-          <div class="row justify-content-between">
-             
-              <div class="col-lg-5">
-                    <h3>Посмотрите видеоролик о нашем центре</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dicta harum minus debitis aut vitae, pariatur reiciendis sit saepe eius. Harum nam pariatur atque aspernatur, rerum quae voluptatum labore accusamus magni, minima maiores eum fugiat cupiditate tempora aliquid odit autem provident obcaecati, exercitationem nihil saepe ipsam enim molestiae facilis. Consectetur.</p>
-              </div>
-              <div class="col-lg-6">
-                <iframe src="https://www.youtube.com/embed/hJH5AflSPD4?loop=1&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-          </div>
-      </div>
+  <section class="contacts">
+    <div class="container">
+       <div class="row text-center">
+           <div class="col-lg-12">
+               <h2>Данные областных противотуберкулёзных диспансеров</h2>
+           </div>
+       </div>
+
+       <div class="row first">
+           <div class="col-lg-12">
+               <div class="city-item">
+                   <div class="item">
+                       <p>Регион</p>
+                   </div>
+                   <div class="item">
+                       <p>ФИО главного врача</p>
+                   </div>
+                   <div class="item">
+                       <p>Номер телефона</p>
+                   </div>
+                   <div class="item">
+                       <p>Email</p>
+                   </div>
+                   
+               </div>
+           </div>
+       </div>
+
+       <?php
+          // параметры по умолчанию
+          $my_posts = get_posts( array(
+            'numberposts' => -1,
+            'category_name'    => 'city_item',
+            'orderby'     => 'date',
+            'order' => 'ASC',
+            'post_type'   => 'post',
+            'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+          ) );
+
+          foreach( $my_posts as $post ){
+            setup_postdata( $post );
+            ?>
+       <div class="row">
+           <div class="col-lg-12">
+               <div class="city-item">
+                   <div class="item">
+                       <p><?php the_field('city'); ?></p>
+                   </div>
+                   <div class="item">
+                       <p><?php the_field('name'); ?></p>
+                   </div>
+                   <div class="item">
+                       <p><?php the_field('phone'); ?></p>
+                   </div>
+                   <div class="item">
+                       <p><a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a></p>
+                   </div>
+                   
+               </div>
+           </div>
+       </div>
+      <?php
+          }
+
+          wp_reset_postdata(); // сброс
+        ?>
+    </div>
   </section>
 
 <?php

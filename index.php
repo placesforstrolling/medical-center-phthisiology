@@ -4,16 +4,15 @@
   get_header();
   // UPDATE wp_options SET option_value = replace(option_value, 'http://medical',' https://pizzauzuz.000webhostapp.com') WHERE option_name = 'home' OR option_name = 'siteurl'; 
   // UPDATE wp_posts SET guid = replace(guid, 'http://medical',' https://pizzauzuz.000webhostapp.com'); 
-  // UPDATE wp_posts SET post_content = replace(post_content, 'http://medical',' https://pizzauzuz.000webhostapp.com'); 
+  // UPDATE wp_posts SET post_content = replace(post_content, 'http://medical',' https://pizzauzuz.000webhostapp.com');
 ?>
-
     <div id="carouselExampleControls" class="carousel slide header-slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <?php
           // параметры по умолчанию
           $my_posts = get_posts( array(
             'numberposts' => -1,
-            'category_name'    => 'slider',
+            'category_name'    => 'slider' . $my_lang,
             'orderby'     => 'date',
             'post_type'   => 'post',
             'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
@@ -94,19 +93,19 @@
         <div class="col-lg-12">
           <div class="xtra-header-items">
             <div class="item">
-              <h3>График работы</h3>
+              <h3><?php pll_e('График работы'); ?></h3>
               <div class="d-flex">
-                <p>Пн-Пт:</p>
+                <p><?php pll_e('Пн-Пт'); ?></p>
                 <p><?php the_field('schedule_1'); ?></p>
               </div>
               <div class="d-flex">
-                <p>Сб-Вс:</p>
+                <p><?php pll_e('Сб-Вс'); ?></p>
                 <p><?php the_field('schedule_2'); ?></p>
               </div>
               <a class="phone" href="tel:<?php the_field('phone_number_1_link'); ?>"><i class="fas fa-phone"></i><?php the_field('phone_number_1'); ?></a>
             </div>
             <div class="item">
-              <h3>График работы</h3>
+              <!-- <h3>График работы</h3>
               <div class="d-flex">
                 <p>Пн-Пт:</p>
                 <p>8:00-23:00</p>
@@ -115,13 +114,13 @@
                 <p>Сб-Вс:</p>
                 <p>8:00-22:00</p>
               </div>
-              <a class="phone" href="tel:+998712780470"><i class="fas fa-phone"></i> +998 (71) 278-04-70</a>
+              <a class="phone" href="tel:+998712780470"><i class="fas fa-phone"></i> +998 (71) 278-04-70</a> -->
             </div>
             <div class="item">
-              <h3>Новости</h3>
-              <p>Последние новости медицнского центра</p>
+              <h3><?php pll_e('Новости'); ?></h3>
+              <p><?php pll_e('Последние новости медицнского центра'); ?></p>
               <div class="but">
-                <a class="btn" href="<?php echo get_home_url(); ?>/press-centr/novosti-centra/">Все новости</a>
+                <a class="btn" href="<?php echo get_home_url(); ?>/press-centr/novosti-centra/"><?php pll_e('Все новости'); ?></a>
               </div>
               
             </div>
@@ -136,8 +135,8 @@
     <div class="container">
       <div class="row text-center heading">
         <div class="col-lg-12">
-          <h2><?php the_field('news_headtag'); ?></h2>
-          <p><?php the_field('news_text'); ?></p>
+          <h2><?php pll_e('Последние новости медицнского центра'); ?></h2>
+          <p><?php pll_e('Команда опытных врачей возглавляет нашу клинику! Познакомьтесь с нашими сотрудниками и посетите нас для решения следующей проблемы!'); ?></p>
         </div>
       </div>
       <div class="row">
@@ -145,7 +144,7 @@
           // параметры по умолчанию
           $my_posts = get_posts( array(
             'numberposts' => 3,
-            'category_name'    => 'news',
+            'category_name'    => 'news' . $my_lang,
             'orderby'     => 'date',
             'order' => 'DESC',
             'post_type'   => 'post',
@@ -164,7 +163,7 @@
               <p class="date"><?php the_time('j F Y'); ?></p>
               <h3><?php echo get_the_title(); ?></h3>
               <p><?php echo kama_excerpt( [ 'maxchar'=>200, 'text'=>get_field('news_text') ] );  ?></p>
-              <a href="<?php the_permalink(); ?>" class="more">Читать полностью <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?php the_permalink(); ?>" class="more"><?php pll_e('Читать полностью'); ?> <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
         </div>
@@ -189,19 +188,19 @@
         <div class="col-xl-3 col-md-2 col-2">
           <div class="item">
           <i class="fas fa-hospital"></i>
-            <p>Общее количество <br> коек</p>
+            <p><?php pll_e('Общее количество коек'); ?></p>
           </div>
         </div>
         <div class="col-xl-3 col-md-2 col-3">
           <div class="item">
             <i class="fas fa-bed"></i>
-            <p>Количество свободных <br> коек</p>
+            <p><?php pll_e('Количество свободных коек'); ?></p>
           </div>
         </div>
         <div class="col-xl-3 col-md-2 col-3">
           <div class="item">
             <i class="fas fa-procedures"></i>
-            <p>Количество занятых <br> коек</p>
+            <p><?php pll_e('Количество занятых коек'); ?></p>
           </div>
         </div>
       </div>
@@ -209,7 +208,7 @@
           // параметры по умолчанию
           $my_posts = get_posts( array(
             'numberposts' => -1,
-            'category_name'    => 'free_places',
+            'category_name'    => 'free_places' . $my_lang,
             'orderby'     => 'date',
             'order' => 'ASC',
             'post_type'   => 'post',
@@ -263,7 +262,7 @@
           </span>
           <div class="txt">
             <h4><?php the_field('main_address'); ?></h4>
-            <p>Знайте наши офисы и филиалы. Свяжитесь с нами сегодня.</p>
+            <p><?php pll_e('Знайте наши офисы и филиалы. Свяжитесь с нами сегодня.'); ?></p>
           </div>
         </div>
         <div class="d-flex">
@@ -272,7 +271,7 @@
           </span>
           <div class="txt">
             <h4><span class="fir"><?php the_field('phone_number_1'); ?></span> <span class="slash">/</span> <span class="sec"><?php the_field('phone_number_2'); ?></span></h4>
-            <p>Посетите нашу страницу записи на прием, чтобы найти удобное для вас время</p>
+            <p><?php pll_e('Посетите нашу страницу записи на прием, чтобы найти удобное для вас время'); ?></p>
           </div>
         </div>
         <div class="d-flex">
@@ -280,13 +279,13 @@
             <i class="far fa-clock"></i>
           </span>
           <div class="txt">
-            <h4>Часы работы</h4>
+            <h4><?php pll_e('Часы работы'); ?></h4>
             <div class="d-flex">
-              <p>Пн-Пт:</p>
+              <p><?php pll_e('Пн-Пт'); ?></p>
               <p><?php the_field('schedule_1'); ?></p>
             </div>
             <div class="d-flex">
-              <p>Сб-Вс:</p>
+              <p><?php pll_e('Сб-Вс'); ?></p>
               <p><?php the_field('schedule_2'); ?></p>
             </div>
           </div>
@@ -306,19 +305,19 @@
           
             <li class="glide__slide">
               <img src="<?php echo bloginfo('template_url'); ?>/assets/img/gerb.png" alt="Open data logotype">
-              <a href="https://ssv.uz/">Министерство здравоохранения Республики Узбекистан</a>
+              <a href="https://ssv.uz/"><?php pll_e('Министерство здравоохранения Республики Узбекистан'); ?></a>
             </li>
             <li class="glide__slide">
               <img src="<?php echo bloginfo('template_url'); ?>/assets/img/gerb.png" alt="Open data logotype">
-              <a href="https://www.gov.uz/">Правительственный портал Республики Узбекистан</a>
+              <a href="https://www.gov.uz/"><?php pll_e('Правительственный портал Республики Узбекистан'); ?>н</a>
             </li>
             <li class="glide__slide">
               <img src="<?php echo bloginfo('template_url'); ?>/assets/img/gov-services-logo.png" alt="Open data logotype">
-              <a href="https://my.gov.uz/">Единый портал интерактивных государственных услуг</a>
+              <a href="https://my.gov.uz/"><?php pll_e('Единый портал интерактивных государственных услуг'); ?></a>
             </li>
             <li class="glide__slide">
               <img src="<?php echo bloginfo('template_url'); ?>/assets/img/gov-data-logo.png" alt="Open data logotype">
-              <a href="https://data.gov.uz/">Портал открытых данных Республики Узбекистан</a>
+              <a href="https://data.gov.uz/"><?php pll_e('Портал открытых данных Республики Узбекистан'); ?></a>
             </li>
           </ul>
         </div>

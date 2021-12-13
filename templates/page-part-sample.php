@@ -36,7 +36,6 @@ Template name: Шаблон подразделений
              </div>
           </div>
       </div>
-
   </section>
 
 <?php
