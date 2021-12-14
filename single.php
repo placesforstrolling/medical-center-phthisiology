@@ -1,8 +1,9 @@
 <?php
 
-if (in_category('leadership')) {
+if (in_category('leadership') || in_category('leadership-ru') || in_category('leadership-uz')) {
       include(TEMPLATEPATH.'/single-leadership.php');
-  } else {
+  }
+   else {
 
     include(TEMPLATEPATH.'/single-default.php');
   }

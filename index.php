@@ -120,7 +120,7 @@
               <h3><?php pll_e('Новости'); ?></h3>
               <p><?php pll_e('Последние новости медицнского центра'); ?></p>
               <div class="but">
-                <a class="btn" href="<?php echo get_home_url(); ?>/press-centr/novosti-centra/"><?php pll_e('Все новости'); ?></a>
+                <a class="btn" href="<?php echo get_permalink(pll_get_post(168)); ?>"><?php pll_e('Все новости'); ?></a>
               </div>
               
             </div>

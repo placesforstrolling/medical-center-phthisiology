@@ -38,13 +38,13 @@
                 <a href="#" onClick="window.print()"><i class="fas fa-print"></i></a>
               </li>|
               <li class="link">
-                <a href="<?php echo get_home_url(); ?>/gerb"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/gerb.png" alt="Gerb"></a>
+                <a href="<?php echo get_permalink(pll_get_post(499)); ?>"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/gerb.png" alt="Gerb"></a>
               </li>
               <li class="link">
-                <a href="<?php echo get_home_url(); ?>/flag"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/flag.png" alt="Flag"></a>
+                <a href="<?php echo get_permalink(pll_get_post(508)); ?>"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/flag.png" alt="Flag"></a>
               </li>
               <li class="link">
-                <a href="<?php echo get_home_url(); ?>/gimn"><i class="fas fa-music"></i></a>
+                <a href="<?php echo get_permalink(pll_get_post(512)); ?>"><i class="fas fa-music"></i></a>
               </li>|
             </ul>
           </nav>

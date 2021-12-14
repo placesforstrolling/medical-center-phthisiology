@@ -39,7 +39,7 @@ Template name: Руководство центра
           // параметры по умолчанию
           $my_posts = get_posts( array(
             'numberposts' => -1,
-            'category_name'    => 'leadership',
+            'category_name'    => 'leadership' . $my_lang,
             'orderby'     => 'date',
             'order' => 'ASC',
             'post_type'   => 'post',

@@ -26,9 +26,9 @@
 
         <div class="col-lg-12">
           <nav class="navbar navbar-expand-lg">
-            <p class="nav-item">© 2021 <b>"Республиканский специализированный научно - <br> практический медицинский центр фтизиатрии и пульмонологии"</b> </p>
+            <p class="nav-item">© <?php echo date('Y'); ?> <b>"<?php pll_e('Республиканский специализированный научно - ') ?><br> <?php pll_e('практический медицинский центр фтизиатрии и пульмонологии') ?>"</b> </p>
 
-
+            
             <ul class="navbar-nav m-auto">
               <li class="nav-item">
                 <a class="nav-link" href="#">Приватность</a>

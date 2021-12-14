@@ -31,17 +31,8 @@ Template name: Государственные символы
   <section class="history">
       <div class="container first">
         <div class="row text-center justify-content-center">
-            <div class="col-lg-6">
-                <img src="<?php the_field('image'); ?>" alt="Symbol" class="p-4">
-            </div>
-            <div class="col-lg-12">
-            
-                <h2 class="mt-5 mb-4"><?php the_field('headtag'); ?></h2>
-                
-               
-            </div>
             <div class="col-lg-10">
-            <p><?php the_field('text'); ?></p>
+              <?php the_content(); ?>
             </div>
         </div>
       </div>

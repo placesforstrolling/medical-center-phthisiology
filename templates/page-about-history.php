@@ -30,14 +30,9 @@ Template name: История центра
 
   <section class="history">
       <div class="container first">
-          <div class="row justify-content-center text-center">
-              <div class="col-lg-8">
-                  <img src="<?php the_field('about-image') ?>" alt="TB center">
-              </div>
-              <div class="col-lg-8">
-                    <h3>Наша история</h2>
-                    <p><?php the_field('about-text') ?></p>
-                    <a href="#" class="btn">Записаться на консультацию</a>
+          <div class="row justify-content-center">
+              <div class="col-lg-10">
+                  <?php the_content(); ?>
               </div>
           </div>
       </div>
@@ -45,8 +40,8 @@ Template name: История центра
           <div class="row justify-content-between">
              
               <div class="col-lg-5">
-                    <h3>Посмотрите видеоролик о нашем центре</h2>
-                    <p>Погрузитесь в наш центр через ролик и виртуально посетите все отделения республиканского специализированного научно-практического медицинского центра фтизиатрии и пульмонологии</p>
+                    <h3><?php pll_e('Посмотрите видеоролик о нашем центре'); ?></h2>
+                    <p><?php pll_e('Погрузитесь'); ?></p>
               </div>
               <div class="col-lg-6">
                 <?php the_field('video', 2); ?>

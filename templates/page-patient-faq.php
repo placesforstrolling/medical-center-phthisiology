@@ -37,7 +37,7 @@ Template name: FAQ (Вопрос-Ответ)
           // параметры по умолчанию
           $my_posts = get_posts( array(
             'numberposts' => -1,
-            'category_name'    => 'faq',
+            'category_name'    => 'faq' . $my_lang,
             'orderby'     => 'date',
             'order' => 'ASC',
             'post_type'   => 'post',

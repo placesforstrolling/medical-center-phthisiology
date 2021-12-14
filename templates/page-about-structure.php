@@ -30,19 +30,9 @@ Template name: Структура центра
 
   <section class="history">
       <div class="container first">
-          <div class="row justify-content-between">
-              <div class="col-lg-6">
-                  <img src="<?php the_field('about-image'); ?>" alt="TB center">
-              </div>
-              <div class="col-lg-5">
-                    <h3>Структура нашего центра</h2>
-                    <p><?php the_field('about-text'); ?></p>
-              </div>
-              
-          </div>
-          <div class="row justify-content-center mt-5">
-          <div class="col-lg-6">
-                  <img src="<?php echo bloginfo('template_url'); ?>/assets/img/structure.jpg" alt="Str">
+          <div class="row justify-content-center">
+              <div class="col-lg-10">
+                  <?php the_content(); ?>
               </div>
           </div>
       </div>
@@ -50,11 +40,11 @@ Template name: Структура центра
           <div class="row justify-content-between">
              
               <div class="col-lg-5">
-                    <h3>Посмотрите видеоролик о нашем центре</h2>
-                    <p>Погрузитесь в наш центр через ролик и виртуально посетите все отделения республиканского специализированного научно-практического медицинского центра фтизиатрии и пульмонологии</p>
+                    <h3><?php pll_e('Посмотрите видеоролик о нашем центре'); ?></h2>
+                    <p><?php pll_e('Погрузитесь'); ?></p>
               </div>
               <div class="col-lg-6">
-              <?php the_field('video', 2); ?>
+                <?php the_field('video', 2); ?>
             </div>
           </div>
       </div>
