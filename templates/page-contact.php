@@ -78,7 +78,7 @@ Template name: Контакты
     <div class="container">
        <div class="row text-center">
            <div class="col-lg-12">
-               <h2>Данные областных противотуберкулёзных диспансеров</h2>
+               <h2><?php pll_e('Данные областных') ?></h2>
            </div>
        </div>
 
@@ -86,13 +86,13 @@ Template name: Контакты
            <div class="col-lg-12">
                <div class="city-item">
                    <div class="item">
-                       <p>Регион</p>
+                       <p><?php pll_e('Регион') ?></p>
                    </div>
                    <div class="item">
-                       <p>ФИО главного врача</p>
+                       <p><?php pll_e('ФИО главного врача') ?></p>
                    </div>
                    <div class="item">
-                       <p>Номер телефона</p>
+                       <p><?php pll_e('Номер телефона') ?></p>
                    </div>
                    <div class="item">
                        <p>Email</p>

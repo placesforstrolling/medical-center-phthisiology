@@ -5,6 +5,7 @@
   // UPDATE wp_options SET option_value = replace(option_value, 'http://medical',' https://pizzauzuz.000webhostapp.com') WHERE option_name = 'home' OR option_name = 'siteurl'; 
   // UPDATE wp_posts SET guid = replace(guid, 'http://medical',' https://pizzauzuz.000webhostapp.com'); 
   // UPDATE wp_posts SET post_content = replace(post_content, 'http://medical',' https://pizzauzuz.000webhostapp.com');
+
 ?>
     <div id="carouselExampleControls" class="carousel slide header-slide" data-bs-ride="carousel">
       <div class="carousel-inner">
@@ -309,7 +310,7 @@
             </li>
             <li class="glide__slide">
               <img src="<?php echo bloginfo('template_url'); ?>/assets/img/gerb.png" alt="Open data logotype">
-              <a href="https://www.gov.uz/"><?php pll_e('Правительственный портал Республики Узбекистан'); ?>н</a>
+              <a href="https://www.gov.uz/"><?php pll_e('Правительственный портал Республики Узбекистан'); ?></a>
             </li>
             <li class="glide__slide">
               <img src="<?php echo bloginfo('template_url'); ?>/assets/img/gov-services-logo.png" alt="Open data logotype">
