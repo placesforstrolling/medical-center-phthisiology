@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="header-slide">
         <div class="carousel-item active">
-            <img src="" class="header-background" alt=""> 
+            <img src="<?php the_field('bg-image') ?>" class="header-background" alt=""> 
         </div>
     </div>
     

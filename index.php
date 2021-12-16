@@ -162,7 +162,7 @@
             </div>
             <div class="item-body">
               <p class="date"><?php the_time('j F Y'); ?></p>
-              <h3><?php echo get_the_title(); ?></h3>
+              <h3><?php the_title(); ?></h3>
               <p><?php echo kama_excerpt( [ 'maxchar'=>200, 'text'=>get_field('news_text') ] );  ?></p>
               <a href="<?php the_permalink(); ?>" class="more"><?php pll_e('Читать полностью'); ?> <i class="fas fa-arrow-circle-right"></i></a>
             </div>
