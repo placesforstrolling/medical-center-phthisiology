@@ -35,7 +35,7 @@ Template name: Совет центра
           // параметры по умолчанию
           $my_posts = get_posts( array(
             'numberposts' => -1,
-            'category_name'    => 'advice',
+            'category_name'    => 'advice' . $my_lang,
             'orderby'     => 'date',
             'order' => 'ASC',
             'post_type'   => 'post',

@@ -29,6 +29,9 @@ body {
             background-color: $light-blue;
             color: $white;
         }
+        &:focus {
+            box-shadow: none!important;
+        }
     }
 
     img {

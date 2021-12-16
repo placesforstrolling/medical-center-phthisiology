@@ -20,7 +20,7 @@
   </header>
 	<section class="leader">
         <div class="container">
-            <div class="row text-center">
+            <div class="row text-center justify-content-center">
                 <div class="col-lg-10">
                     <img src="<?php the_field('news_image'); ?>" alt="New">
                     <p class="date mt-3"><?php the_time('j F Y'); ?></p>
