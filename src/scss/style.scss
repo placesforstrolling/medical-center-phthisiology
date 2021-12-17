@@ -949,6 +949,45 @@ footer {
     }
 }
 
+.calculator {
+    padding: 80px 0;
+    .nav-pills {
+        .nav-link {
+            background: $light-blue;
+            color: #fff;
+            margin-bottom: 5px;
+            &.active {
+                background-color: $dark-blue;
+            }
+        }
+    }
+    .tab-content {
+        width: 100%;
+        .tab-pane {
+            .d-flex {
+                background: $light-blue;
+                color: #fff;
+                width: 100%;
+                padding: 10px;
+                &:nth-child(even) {
+                    background-color: transparent;
+                    color: #000;
+                }
+                .name {
+                    width: 80%;
+                }
+                .price {
+                    width: 9%;
+                }
+                .select {
+                    cursor: pointer;
+                }
+            }
+        }
+        
+    }
+}
+
 .contacts {
     position: relative;
     padding: 60px 0;

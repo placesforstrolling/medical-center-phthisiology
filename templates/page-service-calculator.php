@@ -27,7 +27,7 @@
 
 
 
-  <section class="history">
+  <section class="calculator">
     <div class="container first">
       <div class="row justify-content-between">
         <div class="d-flex align-items-start">
@@ -77,8 +77,16 @@
             <div class="tab-pane fade" id="<?php echo $cat->slug ?>" role="tabpanel" aria-labelledby="v-pills-home-tab">
             <?php
             foreach($myposts as $post){
-              setup_postdata($post); 
-              the_field('service_name') . '->' . the_field('service_price');
+              setup_postdata($post);
+              ?>
+              <div class="d-flex calcItem" data-price="<?php the_field('service_price') ?>">
+                <div class="name"><?php the_field('service_name') ?></div>
+                <div class="price"><?php the_field('service_price') ?></div>
+                <div class="price no"><?php the_field('service_price_no') ?></div>
+                <input class="select" type="checkbox">
+              </div>
+              <?php
+             
             }
             ?>
              </div> 
@@ -91,7 +99,7 @@
             
           </div>
 
-
+<div class="total"></div>
 
 
 

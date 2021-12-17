@@ -126,4 +126,32 @@ document.addEventListener('DOMContentLoaded', () => {
 //     $(this).trigger('hover');
 //   }
 // })
+
+//service calculator
+
+const calcItem = document.querySelectorAll('.calcItem'),
+      calcTotalDiv = document.querySelector('.total');
+let calcTotal = 0;
+      calcItem.forEach(item => {
+        
+        item.addEventListener('click', (e) => {
+          let target = e.target,
+          calcCheckbox = item.querySelector('.select');
+          
+          if (target.tagName == 'DIV') {
+            calcCheckbox.click();
+          } else if (target.tagName == 'INPUT') {
+            if (target.checked) {
+              calcTotal += Number.parseInt(target.parentElement.getAttribute('data-price').replace(/[^\d]/g, ''));
+            } else {
+              calcTotal -= Number.parseInt(target.parentElement.getAttribute('data-price').replace(/[^\d]/g, ''));
+            }
+            calcTotalDiv.innerHTML = calcTotal;
+          }
+          
+        });
+      });
+
+
+// console.log(str.replace(/[^\d]/g, ''));
 });
