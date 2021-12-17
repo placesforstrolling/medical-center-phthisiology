@@ -117,13 +117,13 @@ document.addEventListener('DOMContentLoaded', () => {
         changeFont(element.children[i], num);
     }
 }
-navLink = $('.nav-link');
-navLink.addEventListener('touchend', () => {
-  if($(this).is(':hover')) { 
+// navLink = $('.nav-link');
+// navLink.addEventListener('touchend', () => {
+//   if($(this).is(':hover')) { 
     
-    $(this).off('hover');
-  } else {
-    $(this).trigger('hover');
-  }
-})
+//     $(this).off('hover');
+//   } else {
+//     $(this).trigger('hover');
+//   }
+// })
 });
