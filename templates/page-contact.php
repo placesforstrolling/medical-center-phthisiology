@@ -76,12 +76,13 @@ Template name: Контакты
   </section>
   <section class="contacts">
     <div class="container">
-       <div class="row text-center">
+    <div class="row text-center">
            <div class="col-lg-12">
                <h2><?php pll_e('Данные областных') ?></h2>
            </div>
        </div>
-
+    </div>
+    <div class="container cities">
        <div class="row first">
            <div class="col-lg-12">
                <div class="city-item">
@@ -106,7 +107,7 @@ Template name: Контакты
           // параметры по умолчанию
           $my_posts = get_posts( array(
             'numberposts' => -1,
-            'category_name'    => 'city_item',
+            'category_name'    => 'city_item' . $my_lang,
             'orderby'     => 'date',
             'order' => 'ASC',
             'post_type'   => 'post',

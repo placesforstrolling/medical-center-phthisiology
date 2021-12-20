@@ -1657,6 +1657,18 @@ footer {
             }
         }
     }
+    .contacts {
+        .city-item {
+            min-width: 700px;
+            .item p {
+                font-size: 16px;
+                word-break: break-all;
+            }
+        } 
+        .cities {
+            overflow-x: auto;
+        }
+    }
 }
 @media (max-width: 600px) {
     header {
@@ -1725,6 +1737,17 @@ footer {
         top: 10%;
         right: 2%;
         transform: translate(0);
+    }
+    .contacts {
+        h2 {
+            font-size: 25px;
+        }
+        .city-item {
+            min-width: 500px;
+            .item p {
+                font-size: 12px;
+            }
+        } 
     }
 }
 @media (max-width: 450px) {
