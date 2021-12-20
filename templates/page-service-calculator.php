@@ -30,10 +30,17 @@
   <section class="calculator">
     <div class="container first">
       <div class="row justify-content-between">
+        <div class="radio">
+            <input type="radio" name="resident" class="resident" value="resident">
+            <input type="radio" name="resident" class="resident" value="residentNo">
+        </div>
+      
         <div class="d-flex align-items-start">
 
+     
+            
 
-
+        
         <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
         <?php
       $parent_id = 178;
@@ -75,20 +82,24 @@
             global $post;
             ?>
             <div class="tab-pane fade" id="<?php echo $cat->slug ?>" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <table>
             <?php
             foreach($myposts as $post){
               setup_postdata($post);
               ?>
-              <div class="d-flex calcItem" data-price="<?php the_field('service_price') ?>">
-                <div class="name"><?php the_field('service_name') ?></div>
-                <div class="price"><?php the_field('service_price') ?></div>
-                <div class="price no"><?php the_field('service_price_no') ?></div>
-                <input class="select" type="checkbox">
-              </div>
+              <tr class="calcItem" data-price="<?php the_field('service_price') ?>" data-priceNo="<?php the_field('service_price_no') ?>">
+
+                  <td class="name"><div ><?php the_field('service_name') ?></div></td>
+                  <td class="price"><div><?php the_field('service_price') ?></div></td>
+                  <td class="price no"><div><?php the_field('service_price_no') ?></div></td>
+                  <td class="selector"><input class="select" type="checkbox"></td>
+  
+            </tr>
               <?php
              
             }
             ?>
+            </table>
              </div> 
             <?php
           }
@@ -99,7 +110,7 @@
             
           </div>
 
-<div class="total"></div>
+
 
 
 
@@ -119,6 +130,7 @@
           
 
         </div>
+        <div class="total">Всего: <span class="totalCalc">0</span> сум</div>
       </div>
     </div>
 

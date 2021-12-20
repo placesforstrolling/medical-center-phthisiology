@@ -130,10 +130,13 @@ document.addEventListener('DOMContentLoaded', () => {
 //service calculator
 
 const calcItem = document.querySelectorAll('.calcItem'),
-      calcTotalDiv = document.querySelector('.total');
-let calcTotal = 0;
+      calcTotalDiv = document.querySelector('.totalCalc');
+let calcTotal = 0,
+    dataPrice = 'data-price';
+
+  
+
       calcItem.forEach(item => {
-        
         item.addEventListener('click', (e) => {
           let target = e.target,
           calcCheckbox = item.querySelector('.select');
@@ -142,16 +145,21 @@ let calcTotal = 0;
             calcCheckbox.click();
           } else if (target.tagName == 'INPUT') {
             if (target.checked) {
-              calcTotal += Number.parseInt(target.parentElement.getAttribute('data-price').replace(/[^\d]/g, ''));
+              calcTotal += Number.parseInt(target.parentElement.getAttribute(dataPrice).replace(/[^\d]/g, ''));
             } else {
-              calcTotal -= Number.parseInt(target.parentElement.getAttribute('data-price').replace(/[^\d]/g, ''));
+              calcTotal -= Number.parseInt(target.parentElement.getAttribute(dataPrice).replace(/[^\d]/g, ''));
             }
-            calcTotalDiv.innerHTML = calcTotal;
+            calcTotalDiv.innerHTML = prettify(calcTotal);
           }
           
         });
       });
 
+
+    function prettify(num) {
+        var n = num.toString();
+        return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');
+    }
 
 // console.log(str.replace(/[^\d]/g, ''));
 });
