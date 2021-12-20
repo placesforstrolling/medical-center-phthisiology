@@ -30,10 +30,7 @@
   <section class="calculator">
     <div class="container first">
       <div class="row justify-content-between">
-        <div class="radio">
-            <input type="radio" name="resident" class="resident" value="resident">
-            <input type="radio" name="resident" class="resident" value="residentNo">
-        </div>
+        
       
         <div class="d-flex align-items-start">
 
@@ -83,15 +80,27 @@
             ?>
             <div class="tab-pane fade" id="<?php echo $cat->slug ?>" role="tabpanel" aria-labelledby="v-pills-home-tab">
             <table>
+              <tr>
+                <th></th>
+                <th colspan="2"><?php pll_e('Цена'); ?></th>
+                <th></th>
+              </tr>
+              <tr>
+                <th class="name"><?php pll_e('Наименование услуги:'); ?></td>
+                <th class="price"><label for="resident"><?php pll_e('Резидент'); ?></label> <br><input type="radio" id="resident" name="resident" class="resident" value="data-price"></th>
+                <th class="price"><label for="residentNo"><?php pll_e('Не Резидент'); ?></label> <br><input type="radio" id="residentNo" name="resident" class="resident" value="data-priceNo"></th>
+                <th class="selector"></td>
+              </tr>
+
             <?php
             foreach($myposts as $post){
               setup_postdata($post);
               ?>
               <tr class="calcItem" data-price="<?php the_field('service_price') ?>" data-priceNo="<?php the_field('service_price_no') ?>">
 
-                  <td class="name"><div ><?php the_field('service_name') ?></div></td>
-                  <td class="price"><div><?php the_field('service_price') ?></div></td>
-                  <td class="price no"><div><?php the_field('service_price_no') ?></div></td>
+                  <td class="name"><?php the_field('service_name') ?></td>
+                  <td class="price"><?php the_field('service_price') ?></td>
+                  <td class="price no"><?php the_field('service_price_no') ?></td>
                   <td class="selector"><input class="select" type="checkbox"></td>
   
             </tr>
@@ -130,7 +139,7 @@
           
 
         </div>
-        <div class="total">Всего: <span class="totalCalc">0</span> сум</div>
+        <div class="total"><?php pll_e('Всего:'); ?> <span class="totalCalc">0</span> <?php pll_e('сум'); ?></div>
       </div>
     </div>
 

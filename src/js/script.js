@@ -130,36 +130,41 @@ document.addEventListener('DOMContentLoaded', () => {
 //service calculator
 
 const calcItem = document.querySelectorAll('.calcItem'),
-      calcTotalDiv = document.querySelector('.totalCalc');
+      calcTotalDiv = document.querySelector('.totalCalc'),
+      calcRadio = document.querySelectorAll('.resident')
 let calcTotal = 0,
     dataPrice = 'data-price';
 
   
+    calcRadio.forEach(item => {
+      item.addEventListener('click', () => {
+           dataPrice = item.value;
+           calcWrite(0);
+      });
+    });
 
       calcItem.forEach(item => {
         item.addEventListener('click', (e) => {
           let target = e.target,
           calcCheckbox = item.querySelector('.select');
           
-          if (target.tagName == 'DIV') {
+          if (target.tagName == 'TD') {
             calcCheckbox.click();
           } else if (target.tagName == 'INPUT') {
             if (target.checked) {
-              calcTotal += Number.parseInt(target.parentElement.getAttribute(dataPrice).replace(/[^\d]/g, ''));
+              calcTotal += Number.parseInt(target.parentElement.parentElement.getAttribute(dataPrice).replace(/[^\d]/g, ''));
             } else {
-              calcTotal -= Number.parseInt(target.parentElement.getAttribute(dataPrice).replace(/[^\d]/g, ''));
+              calcTotal -= Number.parseInt(target.parentElement.parentElement.getAttribute(dataPrice).replace(/[^\d]/g, ''));
             }
-            calcTotalDiv.innerHTML = prettify(calcTotal);
+            calcWrite(calcTotal);
           }
           
         });
       });
 
-
-    function prettify(num) {
-        var n = num.toString();
-        return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');
+    function calcWrite(num) {
+      var n = num.toString();
+      n = n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');
+      calcTotalDiv.innerHTML = n;
     }
-
-// console.log(str.replace(/[^\d]/g, ''));
 });
