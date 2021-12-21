@@ -28,7 +28,15 @@ Template name: Школа ХОБЛ
       </div>
   </header>
 
-  
+  <section class="history">
+      <div class="container first">
+          <div class="row justify-content-center">
+              <div class="col-lg-10">
+                  <?php the_content(); ?>
+              </div>
+          </div>
+      </div>
+  </section>
 
 <?php
     get_footer();

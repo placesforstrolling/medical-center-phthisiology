@@ -262,7 +262,7 @@
             <i class="fas fa-map-marker-alt"></i>
           </span>
           <div class="txt">
-            <h4><?php the_field('main_address'); ?></h4>
+            <h4><?php the_field('main_address' . $my_lang); ?></h4>
             <p><?php pll_e('Знайте наши офисы и филиалы. Свяжитесь с нами сегодня.'); ?></p>
           </div>
         </div>

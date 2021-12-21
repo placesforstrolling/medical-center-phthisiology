@@ -33,12 +33,12 @@ Template name: Видео центра
       <div class="container second">
           <div class="row justify-content-between">
              
-              <div class="col-lg-5">
-                    <h3>Посмотрите видеоролик о нашем центре</h2>
-                    <p>Погрузитесь в наш центр через ролик и виртуально посетите все отделения республиканского специализированного научно-практического медицинского центра фтизиатрии и пульмонологии</p>
+          <div class="col-lg-5">
+                    <h3><?php pll_e('Посмотрите видеоролик о нашем центре'); ?></h2>
+                    <p><?php pll_e('Погрузитесь'); ?></p>
               </div>
               <div class="col-lg-6">
-              <?php the_field('video', 2); ?>
+                <?php the_field('video', 2); ?>
             </div>
           </div>
       </div>

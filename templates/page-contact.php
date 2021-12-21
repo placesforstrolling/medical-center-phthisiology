@@ -31,8 +31,7 @@ Template name: Контакты
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-12">
-          <h2>Республиканский специализированный научно -
-практический медицинский центр фтизиатрии и пульмонологии</h2>
+          <h2><?php pll_e('Республиканский специализированный научно - ');  pll_e('практический медицинский центр фтизиатрии и пульмонологии'); ?></h2>
         </div>
         <div class="col-lg-10">
       <div class="map-content">
@@ -41,8 +40,8 @@ Template name: Контакты
             <i class="fas fa-map-marker-alt"></i>
           </span>
           <div class="txt">
-            <h4><?php the_field('main_address', 2); ?></h4>
-            <p>Знайте наши офисы и филиалы. Свяжитесь с нами сегодня.</p>
+            <h4><?php the_field('main_address' . $my_lang, 2); ?></h4>
+            <p><?php pll_e('Знайте наши офисы и филиалы. Свяжитесь с нами сегодня.'); ?></p>
           </div>
         </div>
         <div class="d-flex">
@@ -51,7 +50,7 @@ Template name: Контакты
           </span>
           <div class="txt">
             <h4><span class="fir"><?php the_field('phone_number_1', 2); ?></span> <span class="slash">/</span> <span class="sec"><?php the_field('phone_number_2', 2); ?></span></h4>
-            <p>Посетите нашу страницу записи на прием, чтобы найти удобное для вас время</p>
+            <p><?php pll_e('Посетите нашу страницу записи на прием, чтобы найти удобное для вас время'); ?></p>
           </div>
         </div>
         <div class="d-flex">
@@ -59,13 +58,13 @@ Template name: Контакты
             <i class="far fa-clock"></i>
           </span>
           <div class="txt">
-            <h4>Часы работы</h4>
+            <h4><?php pll_e('Часы работы'); ?></h4>
             <div class="d-flex">
-              <p>Пн-Пт:</p>
+              <p><?php pll_e('Пн-Пт'); ?></p>
               <p><?php the_field('schedule_1', 2); ?></p>
             </div>
             <div class="d-flex">
-              <p>Сб-Вс:</p>
+              <p><?php pll_e('Сб-Вс'); ?></p>
               <p><?php the_field('schedule_2', 2); ?></p>
             </div>
           </div>
@@ -154,8 +153,8 @@ Template name: Контакты
             <i class="fas fa-map-marker-alt"></i>
           </span>
           <div class="txt">
-            <h4><?php the_field('main_address', 2); ?></h4>
-            <p>Знайте наши офисы и филиалы. Свяжитесь с нами сегодня.</p>
+            <h4><?php the_field('main_address' . $my_lang, 2); ?></h4>
+            <p><?php pll_e('Знайте наши офисы и филиалы. Свяжитесь с нами сегодня.'); ?></p>
           </div>
         </div>
         <div class="d-flex">
@@ -164,7 +163,7 @@ Template name: Контакты
           </span>
           <div class="txt">
             <h4><span class="fir"><?php the_field('phone_number_1', 2); ?></span> <span class="slash">/</span> <span class="sec"><?php the_field('phone_number_2', 2); ?></span></h4>
-            <p>Посетите нашу страницу записи на прием, чтобы найти удобное для вас время</p>
+            <p><?php pll_e('Посетите нашу страницу записи на прием, чтобы найти удобное для вас время'); ?></p>
           </div>
         </div>
         <div class="d-flex">
@@ -172,13 +171,13 @@ Template name: Контакты
             <i class="far fa-clock"></i>
           </span>
           <div class="txt">
-            <h4>Часы работы</h4>
+            <h4><?php pll_e('Часы работы'); ?></h4>
             <div class="d-flex">
-              <p>Пн-Пт:</p>
+              <p><?php pll_e('Пн-Пт'); ?></p>
               <p><?php the_field('schedule_1', 2); ?></p>
             </div>
             <div class="d-flex">
-              <p>Сб-Вс:</p>
+              <p><?php pll_e('Сб-Вс'); ?></p>
               <p><?php the_field('schedule_2', 2); ?></p>
             </div>
           </div>

@@ -57,8 +57,7 @@
             <div class="container-fluid">
               <div class="navbar-brand" href="#">
                <?php the_custom_logo(); ?>
-               <span class="title">Республиканский специализированный<br> научно - 
-практический медицинский центр <br>фтизиатрии и пульмонологии</span>
+               <span class="title"><?php pll_e('Республиканский специализированный'); ?><br><?php pll_e('научно - практический медицинский центр'); ?> <br><?php pll_e('фтизиатрии и пульмонологии'); ?></span>
                 </div>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"

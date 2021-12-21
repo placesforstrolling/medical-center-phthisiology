@@ -28,6 +28,15 @@ Template name: Врачи центра
       </div>
   </header>
 
+  <section class="history">
+      <div class="container first">
+          <div class="row justify-content-center">
+              <div class="col-lg-12">
+                  <?php the_content(); ?>
+              </div>
+          </div>
+      </div>
+  </section>
 <?php
     get_footer();
 ?>

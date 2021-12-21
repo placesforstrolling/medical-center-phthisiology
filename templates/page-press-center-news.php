@@ -28,7 +28,7 @@ Template name: Новости центра
       </div>
   </header>
 
-  <section class="news">
+  <section class="news single">
       <div class="container">
           <div class="row">
           <?php
