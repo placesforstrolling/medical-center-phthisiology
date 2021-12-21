@@ -1799,6 +1799,15 @@ footer {
         }
     }
 }
+@media (max-width: 380px) {
+    header {
+        .xtra-header .xtra-header-items .item {
+             p {
+                 font-size: 9px;
+             }
+        } 
+    }
+}
 @media (max-width: 370px) {
     header {
         .navbar.bg-light {

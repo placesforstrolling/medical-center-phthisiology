@@ -106,16 +106,9 @@
               <a class="phone" href="tel:<?php the_field('phone_number_1_link'); ?>"><i class="fas fa-phone"></i><?php the_field('phone_number_1'); ?></a>
             </div>
             <div class="item">
-              <!-- <h3>График работы</h3>
-              <div class="d-flex">
-                <p>Пн-Пт:</p>
-                <p>8:00-23:00</p>
-              </div>
-              <div class="d-flex">
-                <p>Сб-Вс:</p>
-                <p>8:00-22:00</p>
-              </div>
-              <a class="phone" href="tel:+998712780470"><i class="fas fa-phone"></i> +998 (71) 278-04-70</a> -->
+              <h3><?php pll_e('Адрес'); ?></h3>
+              <p><b><?php the_field('main_address' . $my_lang); ?></b></p>
+              <p><?php pll_e('Знайте наши офисы и филиалы. Свяжитесь с нами сегодня.'); ?></p>
             </div>
             <div class="item">
               <h3><?php pll_e('Новости'); ?></h3>
