@@ -131,11 +131,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const calcItem = document.querySelectorAll('.calcItem'),
       calcTotalDiv = document.querySelector('.totalCalc'),
-      calcRadio = document.querySelectorAll('.resident')
+      calcRadio = document.querySelectorAll('.resident'),
+      calcCatBtns = document.querySelectorAll('.nav-pills .nav-link');
 let calcTotal = 0,
     dataPrice = 'data-price';
 
-  
+  $(calcCatBtns[0]).trigger('click');
     calcRadio.forEach(item => {
       item.addEventListener('click', () => {
            dataPrice = item.value;
