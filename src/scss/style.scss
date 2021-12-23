@@ -1254,6 +1254,7 @@ footer {
             .title {
                 display: inline-block;
                 font-weight: 600;
+                text-align: left;
                 transform: translateY(20px);
             }
             .btn {
@@ -1544,6 +1545,17 @@ footer {
             }
         }
     }
+    .history .library .item {
+        padding: 10px;
+        h4 {
+            font-size: 16px!important;
+            color: #fff;
+            margin-bottom: 0;
+        }
+        .fas {
+            font-size: 35px;
+        }
+    } 
 }
     
 @media (max-width: 767px) {
