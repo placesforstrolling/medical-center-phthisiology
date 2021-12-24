@@ -1283,12 +1283,13 @@ footer {
                         position: static;
                         transform: translate(0);
                         
-                        // &:focus {
-                        //     visibility: visible;
-                        //     opacity: 1;
-                        //     transform: translate(20px, 0);
-                        //     padding-top: 0;
-                        // }
+                        &:hover {
+                            visibility: visible;
+                            opacity: 1;
+                            transform: translate(20px, 0);
+                            padding-top: 0;
+                        }
+                        
                     }
                     .sub-menu-link {
                         &:first-child a {
@@ -1299,24 +1300,24 @@ footer {
                         color: #fff;
                         display: block;
     
-                        // &:hover {
-                        //     color: $light-blue;
+                        &:hover {
+                            color: $light-blue;
     
-                        //     &+.sub-menu {
-                        //         visibility: visible;
-                        //         opacity: 1;
-                        //         transform: translateX(20px);
-                        //         padding-top: 0;
-                        //     }
-                        // }
+                            &+.sub-menu {
+                                visibility: visible;
+                                opacity: 1;
+                                transform: translateX(20px);
+                                padding-top: 0;
+                            }
+                        }
                     }
     
-                    // &:focus {
-                    //     visibility: visible;
-                    //     display: block;
-                    //     opacity: 1;
-                    //     transform: translateY(0px);
-                    // }
+                    &:hover {
+                        visibility: visible;
+                        display: block;
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }
                     .sub-sub::before {
                         display: none;
                     }
@@ -1336,22 +1337,17 @@ footer {
                 }
     
                 .nav-link {
-                    // &:focus {
-                    //     &+.sub-menu {
-                    //         visibility: visible;
-                    //         display: block;
-                    //         opacity: 1;
-                    //         transform: translateY(0px);
-                    //     }
-                    // }
+                    &:hover {
+                        &+.sub-menu {
+                            visibility: visible;
+                            display: block;
+                            opacity: 1;
+                            transform: translateY(0px);
+                        }
+                    }
                 }
     
             }
-        }
-        .sub-menu {
-            visibility: visible!important;
-            transition: none!important;
-            transform: none!important;
         }
         .xtra-header {
             .xtra-header-items {
@@ -1821,7 +1817,6 @@ footer {
             font-size: 16px;
         }
     }
-
 }
 @media (max-width: 450px) {
     header {

@@ -38,14 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
   function mobileMenu() {
     if (window.screen.width < 1200) {
       $('.navbar.bg-light').addClass('scrolled');
-      
+
     }
     const links = document.querySelectorAll('.nav-item .dropped');
-      links.forEach(item => {
-        item.addEventListener('click', (e) => {
-          e.preventDefault();
-        });
+    links.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
       });
+    });
   }
 
   function normalizeMenu() {
@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.sub-menu-link').forEach((item) => {
       if ($(item).children('.sub-menu').length > 0) {
         $(item).addClass('sub-sub');
-        
       }
     });
     document.querySelectorAll('.sub-sub > a').forEach(item => {
@@ -67,32 +66,32 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
       });
     });
-    
+
   }
 
 
   const eyeBtn = document.querySelector('.eyeBtn'),
-        opportunitie = document.querySelector('.opportunities'),
-        eyeReverse = opportunitie.querySelector('.eye-reverse'),
-        eyeGray = opportunitie.querySelector('.eye-gray'),
-        eyeNormal = opportunitie.querySelector('.eye-normal'),
-        eyeMinus = opportunitie.querySelector('.eye-minus'),
-        eyePlus = opportunitie.querySelector('.eye-plus'),
-        elements = document.getElementsByTagName("body")[0],
-        closer = opportunitie.querySelector('.closer');
+    opportunitie = document.querySelector('.opportunities'),
+    eyeReverse = opportunitie.querySelector('.eye-reverse'),
+    eyeGray = opportunitie.querySelector('.eye-gray'),
+    eyeNormal = opportunitie.querySelector('.eye-normal'),
+    eyeMinus = opportunitie.querySelector('.eye-minus'),
+    eyePlus = opportunitie.querySelector('.eye-plus'),
+    elements = document.getElementsByTagName("body")[0],
+    closer = opportunitie.querySelector('.closer');
 
 
 
-        eye(eyeReverse, 'eye-reverse');
-        eye(eyeGray, 'eye-gray');
-        eye(eyeNormal, '');
+  eye(eyeReverse, 'eye-reverse');
+  eye(eyeGray, 'eye-gray');
+  eye(eyeNormal, '');
 
-        eyeMinus.addEventListener('click', () => {
-          changeFont(elements, -1);
-        });
-        eyePlus.addEventListener('click', () => {
-          changeFont(elements, 1);
-        });
+  eyeMinus.addEventListener('click', () => {
+    changeFont(elements, -1);
+  });
+  eyePlus.addEventListener('click', () => {
+    changeFont(elements, 1);
+  });
 
   closer.addEventListener('click', () => {
     opportunitie.classList.remove('active');
@@ -100,72 +99,122 @@ document.addEventListener('DOMContentLoaded', () => {
   eyeBtn.addEventListener('click', () => {
     opportunitie.classList.toggle('active');
   });
-  function eye (eye, str) {
+
+  function eye(eye, str) {
     eye.addEventListener('click', () => {
       document.body.className = str;
       console.log(str)
     });
   }
-  function changeFont(element, num){
+
+  function changeFont(element, num) {
     let fontSize = Number(window.getComputedStyle(element).getPropertyValue('font-size').match(/\d+/)[0]) + (num);
     let oldStyle = element.getAttribute('style');
     if (oldStyle == null) {
       oldStyle = '';
     }
     element.setAttribute("style", oldStyle + "font-size:" + fontSize + "px;");
-    for(var i=0; i < element.children.length; i++){
-        changeFont(element.children[i], num);
+    for (var i = 0; i < element.children.length; i++) {
+      changeFont(element.children[i], num);
     }
-}
-// navLink = $('.nav-link');
-// navLink.addEventListener('touchend', () => {
-//   if($(this).is(':hover')) { 
-    
-//     $(this).off('hover');
-//   } else {
-//     $(this).trigger('hover');
-//   }
-// })
+  }
+  // navLink = $('.nav-link');
+  // navLink.addEventListener('touchend', () => {
+  //   if($(this).is(':hover')) { 
 
-//service calculator
+  //     $(this).off('hover');
+  //   } else {
+  //     $(this).trigger('hover');
+  //   }
+  // })
 
-const calcItem = document.querySelectorAll('.calcItem'),
-      calcTotalDiv = document.querySelector('.totalCalc'),
-      calcRadio = document.querySelectorAll('.resident'),
-      calcCatBtns = document.querySelectorAll('.nav-pills .nav-link');
-let calcTotal = 0,
+  //service calculator
+
+  const calcItem = document.querySelectorAll('.calcItem'),
+    calcTotalDiv = document.querySelector('.totalCalc'),
+    calcRadio = document.querySelectorAll('.resident'),
+    calcCatBtns = document.querySelectorAll('.nav-pills .nav-link');
+  let calcTotal = 0,
     dataPrice = 'data-price';
 
   $(calcCatBtns[0]).trigger('click');
-    calcRadio.forEach(item => {
-      item.addEventListener('click', () => {
-           dataPrice = item.value;
-           calcWrite(0);
+  calcRadio.forEach(item => {
+    item.addEventListener('click', () => {
+      dataPrice = item.value;
+      calcWrite(0);
+    });
+  });
+
+  calcItem.forEach(item => {
+    item.addEventListener('click', (e) => {
+      let target = e.target,
+        calcCheckbox = item.querySelector('.select');
+
+      if (target.tagName == 'TD') {
+        calcCheckbox.click();
+      } else if (target.tagName == 'INPUT') {
+        if (target.checked) {
+          calcTotal += Number.parseInt(target.parentElement.parentElement.getAttribute(dataPrice).replace(/[^\d]/g, ''));
+        } else {
+          calcTotal -= Number.parseInt(target.parentElement.parentElement.getAttribute(dataPrice).replace(/[^\d]/g, ''));
+        }
+        calcWrite(calcTotal);
+      }
+
+    });
+  });
+
+  function calcWrite(num) {
+    var n = num.toString();
+    n = n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');
+    calcTotalDiv.innerHTML = n;
+  }
+
+
+  const breadcrumbsLinks = document.querySelectorAll('.yoast-breadcrumbs span span');
+
+  breadcrumbsLinks.forEach((link, i) => {
+    if (i != 0) {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+      });
+    }
+  });
+
+
+  // const menuLink = document.querySelectorAll('.dropped');
+
+  // menuLink.forEach(link => {
+  //   link.addEventListener('touchend', () => {
+  //     subMenu = link.parentNode.querySelector('.sub-menu')
+  //     subMenu.style.cssText += `visibility: visible;
+  //                                     opacity: 1;
+  //                                     transform: translateY(0px);`;
+  //     $(subMenu).slideToggle(200);
+  //   });
+  // });
+
+  let event = 'touchend';
+  if (window.screen.width < 1200 && window.screen.width > 576) {
+    event = 'click';
+  }
+
+  showSubMenu('.sub-sub .nav-link', '.sub-menu', event);
+  showSubMenu('.dropped', '.sub-menu', event);
+
+
+  function showSubMenu(linkClass, itemClass, event) {
+    const menuLink = document.querySelectorAll(linkClass);
+
+    menuLink.forEach(link => {
+      link.addEventListener(event, () => {
+        subMenu = link.parentNode.querySelector(itemClass)
+        subMenu.style.cssText += `visibility: visible;
+                                          opacity: 1;
+                                          transform: translateY(0px);`;
+        $(subMenu).slideToggle(400);
       });
     });
+  }
 
-      calcItem.forEach(item => {
-        item.addEventListener('click', (e) => {
-          let target = e.target,
-          calcCheckbox = item.querySelector('.select');
-          
-          if (target.tagName == 'TD') {
-            calcCheckbox.click();
-          } else if (target.tagName == 'INPUT') {
-            if (target.checked) {
-              calcTotal += Number.parseInt(target.parentElement.parentElement.getAttribute(dataPrice).replace(/[^\d]/g, ''));
-            } else {
-              calcTotal -= Number.parseInt(target.parentElement.parentElement.getAttribute(dataPrice).replace(/[^\d]/g, ''));
-            }
-            calcWrite(calcTotal);
-          }
-          
-        });
-      });
-
-    function calcWrite(num) {
-      var n = num.toString();
-      n = n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');
-      calcTotalDiv.innerHTML = n;
-    }
 });
