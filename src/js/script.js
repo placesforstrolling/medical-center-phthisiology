@@ -181,19 +181,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-
-  // const menuLink = document.querySelectorAll('.dropped');
-
-  // menuLink.forEach(link => {
-  //   link.addEventListener('touchend', () => {
-  //     subMenu = link.parentNode.querySelector('.sub-menu')
-  //     subMenu.style.cssText += `visibility: visible;
-  //                                     opacity: 1;
-  //                                     transform: translateY(0px);`;
-  //     $(subMenu).slideToggle(200);
-  //   });
-  // });
-
   let event = 'touchend';
   if (window.screen.width < 1200 && window.screen.width > 576) {
     event = 'click';
@@ -217,4 +204,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+  const currentPage = document.querySelector('.page-numbers.current'),
+        allPages = document.querySelectorAll('.page-numbers');
+        
+        allPages.forEach(link => {
+          link.classList.add('page-link');
+          wrap(link, document.createElement('li'));
+        });
+  currentPage.parentElement.classList.add('active');
+  currentPage.classList.remove('current');
+
+
+  
+
+  function wrap(el, wrapper) {
+    el.parentNode.insertBefore(wrapper, el);
+    wrapper.classList.add('page-item');
+    wrapper.appendChild(el);
+  }
 });

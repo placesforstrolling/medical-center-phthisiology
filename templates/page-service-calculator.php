@@ -1,4 +1,4 @@
-<php /* Template name: Калькулятор услуг */ ?>
+<?php /* Template name: Калькулятор услуг */ ?>
 
   <?php
     get_header();

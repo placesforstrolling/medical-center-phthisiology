@@ -1,4 +1,4 @@
-<php
+<?php
 /*
 Template name: Отдел ГРП ГФ
 */

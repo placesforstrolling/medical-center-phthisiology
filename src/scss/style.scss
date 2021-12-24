@@ -1113,6 +1113,21 @@ footer {
         margin-top: 20px;
     }
 }
+.pagination {
+    justify-content: center;
+    margin-top: 50px;
+    .prev, .next {
+        // background-color: $light-blue;
+        color: $light-blue;
+    }
+    .page-link:focus {
+        box-shadow: none;
+    }
+    .page-item.active .page-link {
+        background-color: $light-blue;
+        border-color: $light-blue;
+    }
+}
 @media (max-width: 1747px) {
     header {
         .navbar.bg-light {

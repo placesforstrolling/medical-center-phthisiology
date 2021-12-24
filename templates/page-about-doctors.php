@@ -1,4 +1,4 @@
-<php
+<?php
 /*
 Template name: Врачи центра
 */

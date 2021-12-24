@@ -1,4 +1,4 @@
-<php
+<?php
 /*
 Template name: Пресс-центр
 */
