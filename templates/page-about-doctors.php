@@ -30,10 +30,67 @@ Template name: Врачи центра
 
   <section class="history">
       <div class="container first">
-          <div class="row justify-content-center">
-              <div class="col-lg-12">
-                  <?php the_content(); ?>
-              </div>
+      <div class="row">
+
+<?php
+// 1 значение по умолчанию
+$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+
+$the_query = new WP_Query( array(
+'posts_per_page' => 1,
+'category_name'  => 'faq' . $my_lang,
+'paged'          => $paged,
+) );
+$accordion = 0;
+// цикл вывода полученных записей
+while( $the_query->have_posts() ){
+$the_query->the_post();
+?>
+<div class="accordion-item">
+                <h4 class="accordion-header" id="flush-heading<?php echo $accordion; ?>">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo $accordion; ?>" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <?php the_field('question'); ?>
+                </button>
+                </h4>
+                <div id="flush-collapse<?php echo $accordion; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                <?php the_field('answer'); ?>
+                </div>
+                </div>
+            </div>
+        </div>
+<?php 
+$accordion++;
+} 
+wp_reset_postdata();
+
+// пагинация для произвольного запроса
+$big = 999999999; // уникальное число
+
+// echo paginate_links( array(
+// 	'base'    => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+// 	'current' => max( 1, get_query_var('paged') ),
+// 	'total'   => $the_query->max_num_pages
+// ) );
+?>
+<nav aria-label="Page navigation example" class="">
+  <ul class="pagination">
+  <?php
+echo paginate_links( array(
+  'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+  'prev_text' => __('<i class="fas fa-angle-double-left"></i>'),
+  'next_text' => __('<i class="fas fa-angle-double-right"></i>'),
+  'show_all'     => False,
+	'end_size'     => 1,
+	'mid_size'     => 2,
+  'current' => max( 1, get_query_var('paged') ),
+  'total' => $the_query->max_num_pages
+  ) );
+?>
+  </ul>
+</nav>
+
+
           </div>
       </div>
   </section>
