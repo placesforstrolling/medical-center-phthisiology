@@ -967,6 +967,21 @@ footer {
             padding: 5px;
         }
     }
+    .doctors {
+        .item {
+            text-align: center;
+            a {
+                text-decoration: none;
+                color: $light-blue;
+                margin-top: 15px;
+                display: inline-block;
+                &:hover {
+                    color: $dark-blue;
+                }
+            }
+        }
+    }
+    
 }
 
 .calculator {
@@ -1120,6 +1135,13 @@ footer {
     }
     h5 {
         margin-top: 20px;
+    }
+    .doctor {
+        img {
+            max-width: 450px;
+            margin-bottom: 25px;
+        }
+        
     }
 }
 .pagination {

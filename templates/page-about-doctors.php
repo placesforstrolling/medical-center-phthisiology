@@ -30,37 +30,30 @@ Template name: Врачи центра
 
   <section class="history">
       <div class="container first">
-      <div class="row">
+      <div class="row doctors">
 
 <?php
 // 1 значение по умолчанию
 $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
 
 $the_query = new WP_Query( array(
-'posts_per_page' => 1,
-'category_name'  => 'faq' . $my_lang,
+'posts_per_page' => 12,
+'category_name'  => 'doctors' . $my_lang,
 'paged'          => $paged,
 ) );
-$accordion = 0;
 // цикл вывода полученных записей
 while( $the_query->have_posts() ){
 $the_query->the_post();
 ?>
-<div class="accordion-item">
-                <h4 class="accordion-header" id="flush-heading<?php echo $accordion; ?>">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo $accordion; ?>" aria-expanded="false" aria-controls="flush-collapseOne">
-                    <?php the_field('question'); ?>
-                </button>
-                </h4>
-                <div id="flush-collapse<?php echo $accordion; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                <?php the_field('answer'); ?>
-                </div>
-                </div>
-            </div>
-        </div>
+
+<div class="col-md-3 col-sm-6">
+  <div class="item">
+    <img src="<?php the_field('image'); ?>" alt="<?php the_title(); ?>">
+    <h4><a href="<?php the_permalink(); ?>" class=""><?php the_title(); ?></a></h4>
+    <span class="role"><?php the_field('role'); ?></span>
+  </div>
+</div>
 <?php 
-$accordion++;
 } 
 wp_reset_postdata();
 
