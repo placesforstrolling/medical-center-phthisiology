@@ -255,6 +255,7 @@ header {
                 z-index: 5;
                 padding: 0;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.527);
+                display: none;
                 .sub-sub {
                     position: relative;
                     &:hover::before {
@@ -557,25 +558,25 @@ header {
 }
 
 .current {
-    background-image: url('./assets/img/current.jpg');
+    background-image: url('http://medical/wp-content/uploads/2021/12/image-scaled.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding: 70px 0;
     .row {
-        border-top: 1px solid rgba(255, 255, 255, 0.246);
+        border-top: 1px solid #fff;
         align-items: center;
-        border-right: 1px solid rgba(255, 255, 255, 0.246);
-        border-left: 1px solid rgba(255, 255, 255, 0.246);
+        border-right: 1px solid #fff;
+        border-left: 1px solid #fff;
         &:first-child {
-            border: 1px solid rgba(255, 255, 255, 0.246);
+            border: 1px solid #fff;
             border-bottom: none;
             .item {
                 margin-top: 10px;
             }
         }
         &:last-child {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.246);
+            border-bottom: 1px solid #fff;
         }
     }
     .item {
@@ -956,6 +957,14 @@ footer {
 
         p {
             font-size: 16px;
+        }
+    }
+    figure {
+        table, tr, td { 
+            border-collapse: collapse; border-spacing: 0; border:1px solid #000; 
+        }
+        td {
+            padding: 5px;
         }
     }
 }

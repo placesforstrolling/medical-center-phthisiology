@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
       });
     });
-
+    
   }
 
 
@@ -204,19 +204,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
+  
   const currentPage = document.querySelector('.page-numbers.current'),
         allPages = document.querySelectorAll('.page-numbers');
+try {
+  allPages.forEach(link => {
+    link.classList.add('page-link');
+    wrap(link, document.createElement('li'));
+  });
+currentPage.parentElement.classList.add('active');
+currentPage.classList.remove('current');
+
+} catch {
+
+}
         
-        allPages.forEach(link => {
-          link.classList.add('page-link');
-          wrap(link, document.createElement('li'));
-        });
-  currentPage.parentElement.classList.add('active');
-  currentPage.classList.remove('current');
-
-
-  
+setTimeout(() => {
+  $('.sub-menu').css('display', 'block');
+}, 100);
 
   function wrap(el, wrapper) {
     el.parentNode.insertBefore(wrapper, el);

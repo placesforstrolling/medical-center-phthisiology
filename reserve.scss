@@ -252,6 +252,7 @@ header {
                 transition: .3s;
                 transform: translateY(50px);
                 visibility: hidden;
+                display: none;
                 z-index: 5;
                 padding: 0;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.527);
@@ -563,19 +564,19 @@ header {
     background-position: center;
     padding: 70px 0;
     .row {
-        border-top: 1px solid rgba(255, 255, 255, 0.246);
+        border-top: 1px solid #fff;
         align-items: center;
-        border-right: 1px solid rgba(255, 255, 255, 0.246);
-        border-left: 1px solid rgba(255, 255, 255, 0.246);
+        border-right: 1px solid #fff;
+        border-left: 1px solid #fff;
         &:first-child {
-            border: 1px solid rgba(255, 255, 255, 0.246);
+            border: 1px solid #fff;
             border-bottom: none;
             .item {
                 margin-top: 10px;
             }
         }
         &:last-child {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.246);
+            border-bottom: 1px solid #fff;
         }
     }
     .item {

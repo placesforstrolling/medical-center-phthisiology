@@ -56,7 +56,7 @@ Template name: Руководство центра
                     <span class="role"><?php the_field('role') ?></span>
 
                     <p><?php echo kama_excerpt( [ 'maxchar'=>200, 'text'=>get_field('biography') ] );  ?></p>
-                    <a href="<?php the_permalink(); ?>" class="btn">Подробнее</a>
+                    <a href="<?php the_permalink(); ?>" class="btn"><?php pll_e('Подробнее'); ?></a>
              </div>
             </li>
       <?php
