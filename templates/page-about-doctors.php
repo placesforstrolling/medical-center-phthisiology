@@ -46,7 +46,7 @@ while( $the_query->have_posts() ){
 $the_query->the_post();
 ?>
 
-<div class="col-md-3 col-sm-6">
+<div class="col-md-3 col-sm-6 mt-4">
   <div class="item">
     <img src="<?php the_field('image'); ?>" alt="<?php the_title(); ?>">
     <h4><a href="<?php the_permalink(); ?>" class=""><?php the_title(); ?></a></h4>

@@ -12,9 +12,7 @@
             <p class="mail"><b><?php the_field('email', 2); ?></b></p>
           </div>
           <div>
-            <a href="#"><i class="fab fa-linkedin"></i></i>
-          </a>
-          <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i>
+          <a href="https://www.facebook.com/groups/306752353473953/?ref=share"><i class="fab fa-facebook" aria-hidden="true"></i>
           </a>
           <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i>
           </a>
