@@ -83,6 +83,7 @@ add_action('init', function() {
 	pll_register_string('фтизиатрии и пульмонологии', 'фтизиатрии и пульмонологии');
 	pll_register_string('Прием', 'Прием');
 	pll_register_string('Подробнее', 'Подробнее');
+	pll_register_string('Выходной', 'Выходной');
 
 
 

@@ -65,7 +65,7 @@ Template name: Контакты
             </div>
             <div class="d-flex">
               <p><?php pll_e('Сб-Вс'); ?></p>
-              <p><?php the_field('schedule_2', 2); ?></p>
+              <p><?php pll_e('Выходной'); ?></p>
             </div>
           </div>
         </div>
@@ -178,7 +178,7 @@ Template name: Контакты
             </div>
             <div class="d-flex">
               <p><?php pll_e('Сб-Вс'); ?></p>
-              <p><?php the_field('schedule_2', 2); ?></p>
+              <p><?php pll_e('Выходной'); ?></p>
             </div>
           </div>
         </div>

@@ -101,7 +101,7 @@
               </div>
               <div class="d-flex">
                 <p><?php pll_e('Сб-Вс'); ?></p>
-                <p><?php the_field('schedule_2'); ?></p>
+                <p><?php pll_e('Выходной'); ?></p>
               </div>
               <a class="phone" href="tel:<?php the_field('phone_number_1_link'); ?>"><i class="fas fa-phone"></i><?php the_field('phone_number_1'); ?></a>
             </div>
@@ -134,10 +134,95 @@
         </div>
       </div>
       <div class="row">
+      <?php 
+  include get_template_directory() . './phpQuery.php';
+
+  // Общие данные
+$site = 'https://ssv.uz/'. pll_current_language() . '/news';
+$protocol = 'https:';
+$html = file_get_contents($site);
+
+// Документ phpQuery
+$doc = phpQuery::newDocument($html);
+
+// Главные новости
+$newsItems = $doc->find('.news-item');
+
+// Перебираем новости, вытаскиваем заголовки и ссылки
+$news = array();
+foreach ($newsItems as $newsItem) {
+    // Находим нужный элемент
+    $newsDate = pq($newsItem)->find('.news-item__date');
+    $newsTitle = pq($newsItem)->find('.news-item__info h2');
+    $newsText = pq($newsItem)->find('.news-item__info p');
+    $newsLink = pq($newsItem)->find('a');
+     
+    // Вытаскиваем атрибуты
+    $date = $newsDate->text();
+    $title = $newsTitle->text();
+    $text = $newsText->text();
+    $link = $newsLink->attr('href');
+     
+    // Добавляем url сайта при необходимости
+    // if (strpos($link, $site) === false) {
+    //     $link = $site . $link;
+    // }
+ 
+    // Сохраняем результаты в массив
+    array_push($news, array(
+        'title' => $title,
+        'text' => $text,
+        'link' => $link,
+        'date' => $date
+    ));
+    $firstNew = $news[0];
+    $secondNew = $news[1];
+
+};
+phpQuery::unloadDocuments();
+?>
+  <div class="col-md-4">
+          <div class="item">
+            <div class="image">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/gerb.png" style="width: auto; margin: auto;" alt="New">
+            </div>
+            <div class="item-body">
+              <p class="date"> <?php 
+                    echo $firstNew['date'];
+                 ?></p>
+              <h3>
+                <?php 
+                    echo $firstNew['title'];
+                 ?>
+              </h3>
+              <p><?php echo kama_excerpt( [ 'maxchar'=>200, 'text'=>$firstNew['text'] ] );  ?></p>
+              <a href=" <?php echo $firstNew['link']; ?>" class="more"><?php pll_e('Читать полностью'); ?> <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="item">
+            <div class="image">
+              <img src="<?php echo bloginfo('template_url'); ?>/assets/img/gerb.png" alt="New" style="width: auto; margin: auto;">
+            </div>
+            <div class="item-body">
+              <p class="date"> <?php 
+                    echo $secondNew['date'];
+                 ?></p>
+              <h3>
+                <?php 
+                    echo $secondNew['title'];
+                 ?>
+              </h3>
+              <p><?php echo kama_excerpt( [ 'maxchar'=>200, 'text'=>$secondNew['text'] ] );  ?></p>
+              <a href=" <?php echo $secondNew['link']; ?>" class="more"><?php pll_e('Читать полностью'); ?> <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+        </div>
       <?php
           // параметры по умолчанию
           $my_posts = get_posts( array(
-            'numberposts' => 3,
+            'numberposts' => 1,
             'category_name'    => 'news' . $my_lang,
             'orderby'     => 'date',
             'order' => 'DESC',
@@ -280,7 +365,7 @@
             </div>
             <div class="d-flex">
               <p><?php pll_e('Сб-Вс'); ?></p>
-              <p><?php the_field('schedule_2'); ?></p>
+              <p><?php pll_e('Выходной'); ?></p>
             </div>
           </div>
         </div>
@@ -330,6 +415,10 @@
     </div>
   </div>
 </section>
+
+
+
+
 
 <?php
   get_footer();

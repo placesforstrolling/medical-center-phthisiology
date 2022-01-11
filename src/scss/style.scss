@@ -673,7 +673,6 @@ header {
             border-radius: 20px;
             display: flex;
             align-items: center;
-
             img {
                 width: 160px;
                 margin-right: 30px;
@@ -1097,13 +1096,15 @@ footer {
     padding: 60px 0;
     background-color: #777AF212;
     .glide__slide {
-        height: 100%;
+        height: auto;
     }
     .item {
         padding: 20px;
         box-shadow: 0 10px 35px rgba(38,42,76,.1);
         text-align: center;
         height: 100%;
+        position: relative;
+        margin-bottom: 40px;
         img {
             border-radius: 10px;
             width: 80%;
@@ -1118,6 +1119,12 @@ footer {
             color: #7c7c7c;
             display: block;
             font-size: 15px;
+        }
+        .btn {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
     .glide__arrows {
