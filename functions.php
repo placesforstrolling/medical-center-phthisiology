@@ -1,5 +1,4 @@
 <?php
-
 add_action('wp_enqueue_scripts', 'medical_styles');
 add_action('wp_enqueue_scripts', 'medical_scripts');
 add_action('after_setup_theme', 'menu');
@@ -85,7 +84,7 @@ add_action('init', function() {
 	pll_register_string('Подробнее', 'Подробнее');
 	pll_register_string('Выходной', 'Выходной');
 
-
+	
 
 	
 
@@ -141,7 +140,7 @@ function kama_excerpt( $args = '' ){
 		'more_text'         => 'Читать дальше...',
 		'ignore_more'       => false,
 		'save_tags'         => '<strong><b><a><em><i><var><code><span>',
-		'sanitize_callback' => static function( string $text, object $rg ){
+		'sanitize_callback' => static function($text, $rg ){
 			return strip_tags( $text, $rg->save_tags );
 		},
 	], $args );
@@ -223,5 +222,6 @@ function kama_excerpt( $args = '' ){
 
 	return $text;
 }
-
+remove_action('wp_head', 'wp_generator');
+add_filter('login_errors',create_function('$a', 'return null;'));
 ?>
