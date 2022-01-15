@@ -2,10 +2,13 @@
 <?php
 
 get_header();
-// UPDATE wp_options SET option_value = replace(option_value, 'http://medical',' https://pizzauzuz.000webhostapp.com') WHERE option_name = 'home' OR option_name = 'siteurl'; 
-// UPDATE wp_posts SET guid = replace(guid, 'http://medical',' https://pizzauzuz.000webhostapp.com'); 
-// UPDATE wp_posts SET post_content = replace(post_content, 'http://medical',' https://pizzauzuz.000webhostapp.com');
+// UPDATE wp_options SET option_value = replace(option_value, 'http://medical','http://tbcenter.uz') WHERE option_name = 'home' OR option_name = 'siteurl'; 
+// UPDATE wp_posts SET guid = replace(guid, 'http://medical','http://tbcenter.uz'); 
+// UPDATE wp_posts SET post_content = replace(post_content, 'http://medical','http://tbcenter.uz');
 
+// UPDATE wp_options SET option_value = replace(option_value, 'https://medical','http://tbcenter.uz') WHERE option_name = 'home' OR option_name = 'siteurl'; 
+// UPDATE wp_posts SET guid = replace(guid, 'http://medical','https://tbcenter.uz'); 
+// UPDATE wp_posts SET post_content = replace(post_content, 'https://medical','http://tbcenter.uz');
 ?>
   <div id="carouselExampleControls" class="carousel slide header-slide" data-bs-ride="carousel">
     <div class="carousel-inner">
@@ -261,7 +264,9 @@ phpQuery::unloadDocuments();
 </section>
 
 <section class="current">
+        <h2><?php pll_e('Информация о койках на'); echo '<br>' . date('d.m.Y'); ?></h2>
   <div class="container">
+   
     <div class="row text-center">
     <div class="col-xl-3 col-md-5 col-4">
        
@@ -274,14 +279,14 @@ phpQuery::unloadDocuments();
       </div>
       <div class="col-xl-3 col-md-2 col-3">
         <div class="item">
-          <i class="fas fa-bed"></i>
-          <p><?php pll_e('Количество свободных коек'); ?></p>
+          <i class="fas fa-procedures"></i>
+          <p><?php pll_e('Количество занятых коек'); ?></p>
         </div>
       </div>
       <div class="col-xl-3 col-md-2 col-3">
         <div class="item">
-          <i class="fas fa-procedures"></i>
-          <p><?php pll_e('Количество занятых коек'); ?></p>
+          <i class="fas fa-bed"></i>
+          <p><?php pll_e('Количество свободных коек'); ?></p>
         </div>
       </div>
     </div>
@@ -385,11 +390,11 @@ phpQuery::unloadDocuments();
         <ul class="glide__slides">
         
           <li class="glide__slide">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/gerb.png" alt="Open data logotype">
+            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/gerb-slide.png" alt="Open data logotype">
             <a href="https://ssv.uz/"><?php pll_e('Министерство здравоохранения Республики Узбекистан'); ?></a>
           </li>
           <li class="glide__slide">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/gerb.png" alt="Open data logotype">
+            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/gerb-slide.png" alt="Open data logotype">
             <a href="https://www.gov.uz/"><?php pll_e('Правительственный портал Республики Узбекистан'); ?></a>
           </li>
           <li class="glide__slide">

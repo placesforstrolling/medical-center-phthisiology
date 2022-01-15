@@ -29,7 +29,7 @@ Template name: Прейскурант
   </header>
 
   <section class="history">
-      <div class="container first">
+      <div class="container-fluid first">
           <div class="row justify-content-center">
              <div class="col-lg-10">
                  <?php the_content(); ?>

@@ -563,6 +563,11 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     padding: 70px 0;
+    h2 {
+        text-align: center;
+        color: #fff;
+        // margin-bottom: 30px;
+    }
     .row {
         border-top: 1px solid #fff;
         align-items: center;

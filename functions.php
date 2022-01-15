@@ -2,7 +2,8 @@
 add_action('wp_enqueue_scripts', 'medical_styles');
 add_action('wp_enqueue_scripts', 'medical_scripts');
 add_action('after_setup_theme', 'menu');
-
+add_filter('login_errors',create_function('$a', "return null;"));
+remove_action('wp_head', 'wp_generator');
 function medical_styles() {
     wp_enqueue_style('glide-style', 'https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css');
     wp_enqueue_style('font-awesome-style', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
@@ -83,9 +84,7 @@ add_action('init', function() {
 	pll_register_string('Прием', 'Прием');
 	pll_register_string('Подробнее', 'Подробнее');
 	pll_register_string('Выходной', 'Выходной');
-
-	
-
+	pll_register_string('Информация о койках на', 'Информация о койках на');
 	
 
 	
@@ -222,6 +221,5 @@ function kama_excerpt( $args = '' ){
 
 	return $text;
 }
-remove_action('wp_head', 'wp_generator');
-add_filter('login_errors',create_function('$a', 'return null;'));
+
 ?>
